@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiSpher - Healthcare CRM for Solo Practitioners</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --dark-color: #1f2937;
+            --light-bg: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><circle cx="30" cy="30" r="4"/></g></svg>') repeat;
+            opacity: 0.1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .dashboard-preview {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+        
+        .dashboard-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .features-section {
+            padding: 100px 0;
+            background: var(--light-bg);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .icon-patients {
+            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+        }
+        
+        .icon-appointments {
+            background: linear-gradient(135deg, var(--secondary-color), #34d399);
+        }
+        
+        .icon-clinical {
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+        }
+        
+        .icon-user-friendly {
+            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+        }
+        
+        .benefits-section {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            background: #e0f2fe;
+            transform: translateX(10px);
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-color) 0%, #374151 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+            color: white;
+        }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+        
+        .contact-item i {
+            margin-right: 1rem;
+            width: 20px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .feature-card {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center hero-content">
+                    <h1 class="hero-title">From Chaos to Control in 24 Hours</h1>
+                    <p class="hero-subtitle">The complete practice management system that solo practitioners actually love using</p>
+                    
+                    <div class="dashboard-preview">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23f8fafc'/%3E%3Crect x='50' y='50' width='1100' height='80' rx='10' fill='%23374151'/%3E%3Ctext x='100' y='100' font-family='Arial' font-size='24' fill='white'%3EDigiSpher Dashboard%3C/text%3E%3Crect x='950' y='70' width='100' height='40' rx='20' fill='%23ef4444'/%3E%3Ctext x='985' y='95' font-family='Arial' font-size='14' fill='white'%3ELogout%3C/text%3E%3Crect x='50' y='160' width='350' height='150' rx='15' fill='%232563eb'/%3E%3Ctext x='200' y='220' font-family='Arial' font-size='48' fill='white' text-anchor='middle'%3E1%3C/text%3E%3Ctext x='200' y='250' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3ETotal Patients%3C/text%3E%3Crect x='425' y='160' width='350' height='150' rx='15' fill='%2310b981'/%3E%3Ctext x='575' y='220' font-family='Arial' font-size='48' fill='white' text-anchor='middle'%3E1%3C/text%3E%3Ctext x='575' y='250' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EToday's Appointments%3C/text%3E%3Crect x='800' y='160' width='350' height='150' rx='15' fill='%23f59e0b'/%3E%3Ctext x='950' y='220' font-family='Arial' font-size='48' fill='white' text-anchor='middle'%3E0%3C/text%3E%3Ctext x='950' y='250' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EPending Tasks%3C/text%3E%3Crect x='50' y='340' width='550' height='200' rx='15' fill='%23374151'/%3E%3Ctext x='300' y='380' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3ERecent Activities%3C/text%3E%3Ctext x='70' y='420' font-family='Arial' font-size='14' fill='white'%3E• New patient registration: AShrsaf Selmy%3C/text%3E%3Ctext x='70' y='450' font-family='Arial' font-size='14' fill='white'%3E• Appointment scheduled: AShrsaf Selmy - 06/23 at 04:00 PM%3C/text%3E%3Ctext x='70' y='480' font-family='Arial' font-size='14' fill='white'%3E• Appointment scheduled: AShrsaf Selmy - 06/22 at 05:00 PM%3C/text%3E%3Crect x='625' y='340' width='525' height='200' rx='15' fill='%23374151'/%3E%3Ctext x='850' y='380' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3EUpcoming Appointments%3C/text%3E%3Ctext x='850' y='450' font-family='Arial' font-size='16' fill='%236b7280' text-anchor='middle'%3ENo upcoming appointments%3C/text%3E%3C/svg%3E" alt="DigiSpher Dashboard Preview" class="dashboard-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Everything You Need in One Place</h2>
+                    <p class="section-subtitle">Streamline your practice with our comprehensive healthcare CRM designed specifically for solo practitioners</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon icon-patients">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Patient Management</h4>
+                        <p>Efficiently manage patient records, medical history, and personal information all in one secure, organized system.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon icon-appointments">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Appointment Scheduling</h4>
+                        <p>Smart scheduling system that helps you manage appointments, avoid conflicts, and keep your practice running smoothly.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon icon-clinical">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h4>Clinical Notes</h4>
+                        <p>Comprehensive clinical documentation system to record patient visits, treatments, and maintain detailed medical records.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon icon-user-friendly">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>User-Friendly Interface</h4>
+                        <p>Intuitive design that's simple to use, allowing you to focus on patient care rather than struggling with complex software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Built for Solo Practitioners</h2>
+                    <p class="section-subtitle">DigiSpher understands the unique challenges of running a solo practice. Our solution is tailored to meet your specific needs.</p>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h5>Save Time Daily</h5>
+                            <p class="mb-0">Streamlined workflows reduce administrative time, letting you focus more on patient care and less on paperwork.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h5>Secure & Compliant</h5>
+                            <p class="mb-0">HIPAA-compliant security ensures patient data is protected with enterprise-level encryption and backup systems.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div>
+                            <h5>Affordable Solution</h5>
+                            <p class="mb-0">Designed specifically for solo practitioners with pricing that makes sense for smaller practices.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Crect width='500' height='400' fill='%23f8fafc'/%3E%3Ccircle cx='250' cy='200' r='150' fill='%232563eb' opacity='0.1'/%3E%3Ccircle cx='250' cy='200' r='100' fill='%2310b981' opacity='0.2'/%3E%3Ccircle cx='250' cy='200' r='50' fill='%23f59e0b' opacity='0.3'/%3E%3Cpath d='M200 160 L220 180 L280 120' stroke='%232563eb' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='250' y='280' font-family='Arial' font-size='24' fill='%23374151' text-anchor='middle' font-weight='bold'%3ESimple • Secure • Efficient%3C/text%3E%3C/svg%3E" alt="Benefits Illustration" class="img-fluid" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-4 mb-4">Ready to Transform Your Practice?</h2>
+                    <p class="lead mb-4">Join hundreds of solo practitioners who have streamlined their workflow with DigiSpher</p>
+                    
+                    <a href="mailto:info@digispher.online?subject=DigiSpher Demo Request&body=Hi, I'm interested in learning more about DigiSpher Healthcare CRM for my practice. Please send me more information." class="btn-primary-custom mb-4">
+                        <i class="fas fa-envelope me-2"></i>Contact Us Today
+                    </a>
+                    
+                    <div class="contact-info">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <h5 class="mb-3">Get in Touch</h5>
+                                <a href="mailto:info@digispher.online" class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>info@digispher.online</span>
+                                </a>
+                                <a href="https://wa.me/+21623400174" class="contact-item" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp Support</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h5>DigiSpher Healthcare CRM</h5>
+                    <p class="mb-0">&copy; 2025 DigiSpher. Empowering Solo Practitioners with Smart Healthcare Management.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
