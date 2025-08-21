@@ -3,32 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiSpher - Healthcare CRM for Solo Practitioners</title>
+    <title>Digispher - Digital Products for Growing Businesses</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #10b981;
-            --accent-color: #f59e0b;
-            --dark-color: #1f2937;
-            --light-bg: #f8fafc;
+            --primary-blue: #4285f4;
+            --secondary-blue: #1a73e8;
+            --light-blue: #e8f0fe;
+            --dark-blue: #1557b0;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #374151;
         }
-        
+
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            box-shadow: 0 2px 10px rgba(66, 133, 244, 0.2);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--light-blue) !important;
+            transform: translateY(-2px);
+        }
+
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
             color: white;
-            padding: 100px 0 80px;
+            padding: 100px 0;
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -36,352 +57,488 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><circle cx="30" cy="30" r="4"/></g></svg>') repeat;
-            opacity: 0.1;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite linear;
         }
-        
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-        
-        .dashboard-preview {
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            margin-top: 3rem;
-        }
-        
-        .dashboard-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .features-section {
-            padding: 100px 0;
-            background: var(--light-bg);
-        }
-        
-        .feature-card {
+
+        .btn-primary {
             background: white;
-            border-radius: 15px;
-            padding: 2.5rem 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: var(--primary-blue);
             border: none;
-            height: 100%;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: white;
-        }
-        
-        .icon-patients {
-            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
-        }
-        
-        .icon-appointments {
-            background: linear-gradient(135deg, var(--secondary-color), #34d399);
-        }
-        
-        .icon-clinical {
-            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
-        }
-        
-        .icon-user-friendly {
-            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-        }
-        
-        .benefits-section {
-            padding: 100px 0;
-            background: white;
-        }
-        
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--light-bg);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .benefit-item:hover {
-            background: #e0f2fe;
-            transform: translateX(10px);
-        }
-        
-        .benefit-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--secondary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1.5rem;
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, var(--dark-color) 0%, #374151 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .btn-primary-custom {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.2rem;
+            padding: 12px 30px;
             font-weight: 600;
             border-radius: 50px;
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            color: white;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
         }
-        
-        .btn-primary-custom:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
-            color: white;
+
+        .btn-primary:hover {
+            background: var(--light-blue);
+            color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
         }
-        
-        .contact-info {
-            background: rgba(255,255,255,0.1);
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--secondary-blue);
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 2px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
             border-radius: 15px;
-            padding: 2rem;
-            margin-top: 3rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e8f0fe;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.1);
         }
-        
-        .contact-item {
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(66, 133, 244, 0.2);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 20px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            line-height: 60px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e8f0fe;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(66, 133, 244, 0.2);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--secondary-blue);
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .about-section {
+            background: var(--light-blue);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--dark-blue));
             color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
         }
-        
-        .contact-item:hover {
-            color: var(--accent-color);
-            transform: translateX(5px);
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
         }
-        
-        .contact-item i {
-            margin-right: 1rem;
-            width: 20px;
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin-bottom: 20px;
         }
-        
-        .section-title {
+
+        .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+            border-color: white;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .stats {
+            background: white;
+            padding: 60px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--dark-color);
+            color: var(--primary-blue);
         }
-        
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #6b7280;
-            margin-bottom: 3rem;
+
+        .stat-label {
+            color: #666;
+            font-weight: 500;
         }
-        
+
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .hero-section {
+                padding: 60px 0;
             }
             
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .feature-card {
-                margin-bottom: 2rem;
+            .section-padding {
+                padding: 60px 0;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                DIGISPHER
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-12 text-center hero-content">
-                    <h1 class="hero-title">From Chaos to Control in 24 Hours</h1>
-                    <p class="hero-subtitle">The complete practice management system that solo practitioners actually love using</p>
-                    
-                    <div class="dashboard-preview">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23f8fafc'/%3E%3Crect x='50' y='50' width='1100' height='80' rx='10' fill='%23374151'/%3E%3Ctext x='100' y='100' font-family='Arial' font-size='24' fill='white'%3EDigiSpher Dashboard%3C/text%3E%3Crect x='950' y='70' width='100' height='40' rx='20' fill='%23ef4444'/%3E%3Ctext x='985' y='95' font-family='Arial' font-size='14' fill='white'%3ELogout%3C/text%3E%3Crect x='50' y='160' width='350' height='150' rx='15' fill='%232563eb'/%3E%3Ctext x='200' y='220' font-family='Arial' font-size='48' fill='white' text-anchor='middle'%3E1%3C/text%3E%3Ctext x='200' y='250' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3ETotal Patients%3C/text%3E%3Crect x='425' y='160' width='350' height='150' rx='15' fill='%2310b981'/%3E%3Ctext x='575' y='220' font-family='Arial' font-size='48' fill='white' text-anchor='middle'%3E1%3C/text%3E%3Ctext x='575' y='250' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EToday's Appointments%3C/text%3E%3Crect x='800' y='160' width='350' height='150' rx='15' fill='%23f59e0b'/%3E%3Ctext x='950' y='220' font-family='Arial' font-size='48' fill='white' text-anchor='middle'%3E0%3C/text%3E%3Ctext x='950' y='250' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EPending Tasks%3C/text%3E%3Crect x='50' y='340' width='550' height='200' rx='15' fill='%23374151'/%3E%3Ctext x='300' y='380' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3ERecent Activities%3C/text%3E%3Ctext x='70' y='420' font-family='Arial' font-size='14' fill='white'%3E• New patient registration: AShrsaf Selmy%3C/text%3E%3Ctext x='70' y='450' font-family='Arial' font-size='14' fill='white'%3E• Appointment scheduled: AShrsaf Selmy - 06/23 at 04:00 PM%3C/text%3E%3Ctext x='70' y='480' font-family='Arial' font-size='14' fill='white'%3E• Appointment scheduled: AShrsaf Selmy - 06/22 at 05:00 PM%3C/text%3E%3Crect x='625' y='340' width='525' height='200' rx='15' fill='%23374151'/%3E%3Ctext x='850' y='380' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3EUpcoming Appointments%3C/text%3E%3Ctext x='850' y='450' font-family='Arial' font-size='16' fill='%236b7280' text-anchor='middle'%3ENo upcoming appointments%3C/text%3E%3C/svg%3E" alt="DigiSpher Dashboard Preview" class="dashboard-image">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Accelerate Your Business Growth with Digital Solutions</h1>
+                    <p class="lead mb-4">Digispher provides cutting-edge digital products designed specifically to help small businesses grow faster, reach more customers, and increase revenue.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#products" class="btn btn-primary">Explore Products</a>
+                        <a href="#contact" class="btn btn-outline-light">Get Started Today</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-image">
+                        <i class="fas fa-rocket" style="font-size: 8rem; color: rgba(255,255,255,0.8);"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="section-title">Everything You Need in One Place</h2>
-                    <p class="section-subtitle">Streamline your practice with our comprehensive healthcare CRM designed specifically for solo practitioners</p>
-                </div>
-            </div>
-            
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon icon-patients">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Patient Management</h4>
-                        <p>Efficiently manage patient records, medical history, and personal information all in one secure, organized system.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Customers</div>
                     </div>
                 </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon icon-appointments">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h4>Appointment Scheduling</h4>
-                        <p>Smart scheduling system that helps you manage appointments, avoid conflicts, and keep your practice running smoothly.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Digital Products</div>
                     </div>
                 </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon icon-clinical">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <h4>Clinical Notes</h4>
-                        <p>Comprehensive clinical documentation system to record patient visits, treatments, and maintain detailed medical records.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Success Rate</div>
                     </div>
                 </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="feature-card text-center">
-                        <div class="feature-icon icon-user-friendly">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4>User-Friendly Interface</h4>
-                        <p>Intuitive design that's simple to use, allowing you to focus on patient care rather than struggling with complex software.</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits-section">
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2 class="section-title">Built for Solo Practitioners</h2>
-                    <p class="section-subtitle">DigiSpher understands the unique challenges of running a solo practice. Our solution is tailored to meet your specific needs.</p>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-clock"></i>
+                    <h2 class="section-title">About Digispher</h2>
+                    <p class="lead">We are passionate about empowering small businesses with the digital tools they need to succeed in today's competitive marketplace.</p>
+                    <p>At Digispher, we understand the challenges that small businesses face. That's why we've created a comprehensive suite of digital products that are specifically designed to help you grow faster, reach more customers, and increase your revenue.</p>
+                    <p>Our team of experts has years of experience in digital marketing, e-commerce, and business development. We use this expertise to create products that deliver real results for our customers.</p>
+                    <div class="row mt-4">
+                        <div class="col-sm-6">
+                            <h5><i class="fas fa-check-circle text-primary me-2"></i>Expert Team</h5>
+                            <p>Our experienced professionals are dedicated to your success.</p>
                         </div>
-                        <div>
-                            <h5>Save Time Daily</h5>
-                            <p class="mb-0">Streamlined workflows reduce administrative time, letting you focus more on patient care and less on paperwork.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h5>Secure & Compliant</h5>
-                            <p class="mb-0">HIPAA-compliant security ensures patient data is protected with enterprise-level encryption and backup systems.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <div>
-                            <h5>Affordable Solution</h5>
-                            <p class="mb-0">Designed specifically for solo practitioners with pricing that makes sense for smaller practices.</p>
+                        <div class="col-sm-6">
+                            <h5><i class="fas fa-check-circle text-primary me-2"></i>Proven Results</h5>
+                            <p>Our products have helped hundreds of businesses grow.</p>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <div class="text-center">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Crect width='500' height='400' fill='%23f8fafc'/%3E%3Ccircle cx='250' cy='200' r='150' fill='%232563eb' opacity='0.1'/%3E%3Ccircle cx='250' cy='200' r='100' fill='%2310b981' opacity='0.2'/%3E%3Ccircle cx='250' cy='200' r='50' fill='%23f59e0b' opacity='0.3'/%3E%3Cpath d='M200 160 L220 180 L280 120' stroke='%232563eb' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='250' y='280' font-family='Arial' font-size='24' fill='%23374151' text-anchor='middle' font-weight='bold'%3ESimple • Secure • Efficient%3C/text%3E%3C/svg%3E" alt="Benefits Illustration" class="img-fluid" style="max-width: 400px;">
+                        <i class="fas fa-users" style="font-size: 8rem; color: var(--primary-blue);"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section">
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
         <div class="container">
+            <h2 class="section-title text-center">Our Services</h2>
             <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="display-4 mb-4">Ready to Transform Your Practice?</h2>
-                    <p class="lead mb-4">Join hundreds of solo practitioners who have streamlined their workflow with DigiSpher</p>
-                    
-                    <a href="mailto:info@digispher.online?subject=DigiSpher Demo Request&body=Hi, I'm interested in learning more about DigiSpher Healthcare CRM for my practice. Please send me more information." class="btn-primary-custom mb-4">
-                        <i class="fas fa-envelope me-2"></i>Contact Us Today
-                    </a>
-                    
-                    <div class="contact-info">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <h5 class="mb-3">Get in Touch</h5>
-                                <a href="mailto:info@digispher.online" class="contact-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>info@digispher.online</span>
-                                </a>
-                                <a href="https://wa.me/+21623400174" class="contact-item" target="_blank">
-                                    <i class="fab fa-whatsapp"></i>
-                                    <span>WhatsApp Support</span>
-                                </a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Growth Analytics</h4>
+                        <p>Advanced analytics tools to track and optimize your business growth with real-time insights and actionable data.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <h4>Digital Marketing</h4>
+                        <p>Comprehensive digital marketing solutions including social media management, SEO optimization, and content strategies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-commerce Solutions</h4>
+                        <p>Complete e-commerce platforms and tools to help you sell your products and services online effectively.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h4>Customer Management</h4>
+                        <p>CRM tools and customer engagement solutions to help you build stronger relationships with your clients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Optimization</h4>
+                        <p>Mobile-first solutions to ensure your business reaches customers on all devices and platforms.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock customer support to ensure your business operations run smoothly without interruption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title text-center">Our Digital Products</h2>
+            <p class="text-center lead mb-5">Discover our comprehensive range of digital products designed to accelerate your business growth.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="ats_resume.png" alt="Business Analytics Suite">
+                        </div>
+                        <div class="p-4">
+                            <h5>ATS-Friendly Resume <Template></Template></h5>
+                            <p>ATS-friendly resume template with a 95+ score easy to customize and designed to help you land more interviews</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold">$7.00</span>
+                                <a href="https://salmyachraf.gumroad.com/l/ats-frindly-cv" class="btn btn-primary btn-sm" target="_blank">View Detail</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="excel.jpg" alt="Marketing Automation Kit">
+                        </div>
+                        <div class="p-4">
+                            <h5>Sales And Inventory Excel template </h5>
+                            <p>All-in-one Sales & Inventory Excel Template featuring automated profit margin calculations for smarter business management.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold">$4.99</span>
+                                <a href="https://salmyachraf.gumroad.com/l/itbjr" class="btn btn-primary btn-sm" target="_blank">View Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="emr.png" alt="E-commerce Starter Pack">
+                        </div>
+                        <div class="p-4">
+                            <h5>DigiCare EMR System</h5>
+                            <p>Easy-to-use EMR software that helps healthcare providers simplify patient management and deliver better care.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold">$79.99</span>
+                                <a href="https://salmyachraf.gumroad.com/l/vudddx" class="btn btn-primary btn-sm" target="_blank">View Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="text-center mt-5">
+                <a href="https://salmyachraf.gumroad.com/?_gl=1*mwswlm*_ga*MTM2OTQxNTAyOC4xNzU1NDI1ODY0*_ga_6LJN6D94N6*czE3NTU3Nzg4OTAkbzE0JGcxJHQxNzU1NzgwOTAyJGoxNyRsMCRoMA" target="_blank" class="btn btn-primary">Find More Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title text-white">Get In Touch</h2>
+                    <p class="lead mb-4">Ready to transform your business? Contact us today to discuss how our digital products can help you achieve your growth goals.</p>
+                    
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6>Email</h6>
+                                <p class="mb-0">info@digispher.online</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6>Phone</h6>
+                                <p class="mb-0">+21623400174</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-clock me-3" style="font-size: 1.5rem;"></i>
+                            <div>
+                                <h6>Business Hours</h6>
+                                <p class="mb-0">Mon - Fri: 9AM - 6PM</p>
+                            </div>
+                        </div>
+                        <div>
+                         <a href="mailto:info@digispher.online" class="text-white me-3" style="font-size: 3rem;"><i class="fas fa-envelope"></i></a>
+
+                        <a href="https://www.facebook.com/profile.php?id=61579629663013" class="text-white me-3" style="font-size: 3rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/salmyachraf" class="text-white me-3" style="font-size: 3rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ashraf-salmy-531644325" class="text-white me-3" style="font-size: 3rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/+21623400174" class="text-white me-3" style="font-size: 3rem;"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Send us a Message</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -389,17 +546,115 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h5>DigiSpher Healthcare CRM</h5>
-                    <p class="mb-0">&copy; 2025 DigiSpher. Empowering Solo Practitioners with Smart Healthcare Management.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Digispher. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="mailto:info@digispher.online" class="text-white me-3"><i class="fas fa-envelope"></i></a>
+
+                        <a href="https://www.facebook.com/profile.php?id=61579629663013" class="text-primary me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/salmyachraf" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ashraf-salmy-531644325" class="text-primary me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/+21623400174" class="text-info me-3"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@DigiDpher-e7t" class="text-danger"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navigation items on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Contact form submission
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon.');
+            this.reset();
+        });
+
+        // Add animation to stats numbers
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const originalText = target.textContent;
+                        
+                        // Skip animation for non-numeric values like "24/7"
+                        if (originalText.includes('/') || originalText === '24/7') {
+                            return; // Keep original text as is
+                        }
+                        
+                        const finalNumber = parseInt(originalText.replace('+', '').replace('%', ''));
+                        const isPercentage = originalText.includes('%');
+                        const hasPlus = originalText.includes('+');
+                        
+                        // Only animate if we have a valid number
+                        if (!isNaN(finalNumber)) {
+                            let current = 0;
+                            const increment = finalNumber / 50;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= finalNumber) {
+                                    current = finalNumber;
+                                    clearInterval(timer);
+                                }
+                                target.textContent = Math.floor(current) + 
+                                    (isPercentage ? '%' : '') + 
+                                    (hasPlus && !isPercentage ? '+' : '');
+                            }, 40);
+                        }
+                    }
+                });
+            });
+            
+            statNumbers.forEach(stat => observer.observe(stat));
+        }
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', animateStats);
+    </script>
 </body>
 </html>
