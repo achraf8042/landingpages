@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="-zUiM9mGCCmhWyk0Vqj_lrzpVH37a2038djXl7hfkmo" />
-  <title>DigiSpher | Agence Web Tunisie – Création de sites modernes et optimisés</title>
-  <meta name="description" content="DigiSpher est une agence web tunisienne spécialisée dans la création de sites modernes, le référencement local (SEO Tunisie) et les solutions digitales pour cliniques, agences immobilières et entreprises. Boostez votre présence en ligne avec des designs responsives, une optimisation SEO avancée et des performances exceptionnelles.">
+  <title>DigiSpher | Agence Web Tunisie, Création de sites modernes et optimisés</title>
+  <meta name="description" content="DigiSpher est une agence web tunisienne spécialisée dans la création de sites modernes, le référencement local (SEO Tunisie) et les solutions digitales pour cliniques, agences immobilières et entreprises.">
   <meta name="keywords" content="agence web Tunisie, site web Tunisie, création site vitrine, SEO Tunisie, web design Tunisie, référencement local Tunisie, développement web Tunisie, optimisation SEO, sites e-commerce Tunisie">
   <meta name="author" content="DigiSpher">
   <meta name="robots" content="index, follow">
@@ -14,16 +14,16 @@
   <!-- Open Graph Meta Tags for Social Sharing -->
   <meta property="og:title" content="DigiSpher | Agence Web Tunisie – Création de sites modernes et optimisés">
   <meta property="og:description" content="DigiSpher est une agence web tunisienne spécialisée dans la création de sites modernes, le référencement local (SEO Tunisie) et les solutions digitales pour cliniques, agences immobilières et entreprises.">
-  <meta property="og:image" content="digispher.png">
+  <meta property="og:image" content="digispher-logo1.png">
   <meta property="og:url" content="https://digispher.online">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DigiSpher">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DigiSpher | Agence Web Tunisie – Création de sites modernes et optimisés">
+  <meta name="twitter:title" content="DigiSpher | Agence Web Tunisie Création de sites modernes et optimisés">
   <meta name="twitter:description" content="DigiSpher est une agence web tunisienne spécialisée dans la création de sites modernes, le référencement local (SEO Tunisie) et les solutions digitales pour cliniques, agences immobilières et entreprises.">
-  <meta name="twitter:image" content="https://digispher.online/placeholder-logo.png">
+  <meta name="twitter:image" content="digispher-logo1.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -46,7 +46,23 @@
     .whatsapp-btn{position:fixed;right:18px;bottom:18px;z-index:1050}
     .social-icons a{color:#fff; margin-right:15px; font-size:1.5rem;}
     .social-icons a:hover{color:var(--primary);}
-    @media (max-width:576px){html,body{font-size:16px}}
+        /* Mobile devices (portrait) */
+    @media (max-width:576px){
+
+      html,body{font-size:16px}
+      .hero{padding:3rem 0}
+      h1{font-size:1.8rem}
+      h2{font-size:1.4rem}
+      .lead{font-size:1rem}
+      .cta-btn{padding:0.75rem 1rem;font-size:0.95rem}
+      .navbar-brand img{height:42px}
+      .service-card{min-height:auto}
+      .card-icon{font-size:1.6rem}
+      .big-font{font-size:1rem}
+      .whatsapp-btn{right:12px;bottom:12px}
+      .social-icons a{font-size:1.3rem;margin-right:12px}
+    }
+
   </style>
 
   <!-- Schema.org JSON-LD for LocalBusiness (Tunisie) -->
@@ -54,8 +70,8 @@
   {
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
-    "name":"DigiSpher",
-    "image":"https://digispher.online/placeholder-logo.png",
+    "name":"DigiSpher Web Solution",
+    "image":"digispher-logo1.png",
     "@id":"https://digispher.online",
     "url":"https://digispher.online",
     "telephone":"+21623400174",
@@ -64,12 +80,16 @@
       "@type":"PostalAddress",
       "streetAddress":"Tunis",
       "addressLocality":"Tunis",
-      "postalCode":"1000",
+      "postalCode":"8050",
       "addressCountry":"TN"
     },
     "description":"Agence web à Tunis spécialisée en création de sites modernes, référencement local et solutions digitales pour entreprises en Tunisie.",
     "areaServed":{"@type":"Country","name":"Tunisia"},
-    "sameAs":["https://www.facebook.com/digispher","https://www.instagram.com/digispher","https://www.linkedin.com/company/digispher","https://twitter.com/digispher"]
+    "sameAs":[
+    "https://www.facebook.com/profile.php?id=61579736908309"
+    "https://www.instagram.com/digispher8",
+    "https://www.linkedin.com/company/digispher"
+    ]
   }
   </script>
 </head>
@@ -78,7 +98,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="digispher-logo.png" alt="Logo DigiSpher - Agence Web Tunisie">
+        <img src="digispher-logo1.png" alt="Logo DigiSpher - Agence Web Tunisie">
         <span class="ms-2 fw-bold">DigiSpher</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -97,7 +117,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero bg-dark text-white">
+  <header class="hero bg-info text-dark">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7" data-aos="fade-right">
@@ -107,11 +127,11 @@
             <a href="#contact" class="btn btn-light btn-lg cta-btn">Demander un devis gratuit</a>
             <a href="#portfolio" class="btn btn-outline-light btn-lg cta-btn">Voir nos réalisations</a>
           </div>
-          <p class="mt-4 small text-white">Service disponible à Tunis, Sfax, Sousse et partout en Tunisie. Contactez-nous pour un audit SEO gratuit et découvrez comment nous pouvons propulser votre business en ligne.</p>
+          <p class="mt-4 small text-dark">Service disponible à Tunis, Sfax, Sousse et partout en Tunisie. Contactez-nous pour un audit SEO gratuit et découvrez comment nous pouvons propulser votre business en ligne.</p>
         </div>
         <div class="col-lg-5" data-aos="fade-left">
           <div class="card shadow-soft border-0">
-            <img src="digispher-web-solution.png" alt="Aperçu des réalisations de sites web par DigiSpher - Agence SEO Tunisie">
+            <img src="digispher-web-solution-tunisie.png" alt="Aperçu des réalisations de sites web par DigiSpher - Agence SEO Tunisie">
           </div>
         </div>
       </div>
