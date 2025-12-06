@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiCare EMR - Professional On-Premise EMR for Solo Practitioners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-cta {
+            background: white;
+            color: #0284c7;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
+        }
+
+        .price-badge {
+            display: inline-block;
+            margin-top: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .price-badge strong {
+            font-size: 20px;
+            color: #fef08a;
+        }
+
+        /* Trust Badges */
+        .trust-section {
+            background: #f8fafc;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trust-text {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .trust-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .trust-stat {
+            text-align: center;
+        }
+
+        .trust-stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0284c7;
+            display: block;
+        }
+
+        .trust-stat-label {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: #fef2f2;
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 5px solid #ef4444;
+        }
+
+        .problem-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .problem-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #991b1b;
+        }
+
+        .problem-card p {
+            color: #7f1d1d;
+            line-height: 1.7;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .solution-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .solution-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #0284c7;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: #0284c7;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8fafc;
+        }
+
+        .feature-name {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .price-cell {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .price-traditional {
+            color: #dc2626;
+        }
+
+        .price-cloud {
+            color: #f59e0b;
+        }
+
+        .price-digicare {
+            color: #22c55e;
+            font-size: 24px;
+        }
+
+        .savings-badge {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 20px;
+            background: #f8fafc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+
+        .pricing-card {
+            background: white;
+            color: #1e293b;
+            padding: 40px 30px;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #22c55e;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0284c7;
+            margin: 20px 0;
+        }
+
+        .pricing-card .price sup {
+            font-size: 24px;
+        }
+
+        .pricing-card .price-note {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-card li::before {
+            content: '✓';
+            color: #22c55e;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .pricing-cta {
+            display: block;
+            background: #0284c7;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .pricing-cta:hover {
+            background: #0369a1;
+            transform: translateY(-2px);
+        }
+
+        .featured .pricing-cta {
+            background: #22c55e;
+        }
+
+        .featured .pricing-cta:hover {
+            background: #16a34a;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: #1e293b;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 20px 50px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 22px;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
+        }
+
+        .guarantee {
+            margin-top: 30px;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .comparison-table {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                🏥 DigiCare EMR
+            </div>
+            <a href="#pricing" class="nav-cta">Get Started →</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional On-Premise EMR<br>Without the $50,000 Price Tag</h1>
+            <p class="hero-subtitle">The only EMR built specifically for solo practitioners who want data ownership without enterprise complexity</p>
+            <p class="hero-description">Own your patient data forever. No monthly fees. No internet required. No IT department needed.</p>
+            <a href="#pricing" class="hero-cta">Start Your Practice Today</a>
+            <div class="price-badge">
+                <strong>Launch Special:</strong> Only $899 for first 50 customers (Save $600)
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <p class="trust-text">Join doctors who've saved thousands</p>
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">$49,000+</span>
+                    <span class="trust-stat-label">Average Savings</span>
+                </div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">98%</span>
+                    <span class="trust-stat-label">Cost Reduction</span>
+                </div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">5 Min</span>
+                    <span class="trust-stat-label">Setup Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Problem with Current EMR Systems</h2>
+            <p class="section-subtitle">Solo practitioners are forced to choose between expensive enterprise systems or giving up control of their data</p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Outrageous Costs</h3>
+                    <p>Traditional on-premise EMRs cost $50,000-500,000 upfront, plus thousands per year in maintenance. Cloud EMRs charge $150-200/month forever.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔒</div>
+                    <h3>Lost Data Control</h3>
+                    <p>Cloud systems hold your patient data hostage. Cancel your subscription? Lose access to years of medical records.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏢</div>
+                    <h3>Built for Hospitals</h3>
+                    <p>Enterprise EMRs have 500 features you'll never use. Complex, bloated, and require dedicated IT staff to maintain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">Introducing DigiCare EMR</h2>
+            <p class="section-subtitle">Professional on-premise EMR designed specifically for solo practitioners</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">💰</div>
+                    <h3>Pay Once, Own Forever</h3>
+                    <p>$899 one-time payment (launch price). No monthly fees. No hidden costs. No surprises. Save $49,000+ vs traditional systems.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🖥️</div>
+                    <h3>Your Computer, Your Data</h3>
+                    <p>Runs entirely on your computer. Patient data never leaves your office. Complete HIPAA compliance is easier when data stays with you.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3>5-Minute Setup</h3>
+                    <p>Download, install, start practicing. No servers to buy. No IT department needed. No complex configuration.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📱</div>
+                    <h3>Works Offline</h3>
+                    <p>No internet required. Perfect for rural practices or areas with unreliable connectivity. Fast and reliable always.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📋</div>
+                    <h3>SOAP Clinical Notes</h3>
+                    <p>Industry-standard documentation format. Subjective, Objective, Assessment, Plan. Organized and professional.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">💊</div>
+                    <h3>PDF Prescriptions</h3>
+                    <p>Generate professional prescription PDFs instantly. Include your practice logo, license number, and signature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Compare the Real Costs</h2>
+            <p class="section-subtitle">Traditional systems hide the true cost. Here's what you'll actually pay over 5 years:</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cost Factor</th>
+                            <th>Traditional On-Premise</th>
+                            <th>Cloud EMR</th>
+                            <th>DigiCare</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Upfront Cost</td>
+                            <td class="price-cell price-traditional">$50,000+</td>
+                            <td class="price-cell price-cloud">$0</td>
+                            <td class="price-cell price-digicare">$899</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Monthly Fee</td>
+                            <td>$0</td>
+                            <td class="price-cell price-cloud">$150-200</td>
+                            <td class="price-cell price-digicare">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Annual Maintenance</td>
+                            <td class="price-cell price-traditional">$2,400-6,000</td>
+                            <td>Included</td>
+                            <td>$199 (optional)</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Server Hardware</td>
+                            <td class="price-cell price-traditional">$10,000+</td>
+                            <td>$0</td>
+                            <td class="price-cell price-digicare">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">IT Staff Required</td>
+                            <td class="price-cell price-traditional">Yes ($50K/year)</td>
+                            <td>No</td>
+                            <td class="price-cell price-digicare">No</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Internet Required</td>
+                            <td>No</td>
+                            <td class="price-cell price-cloud">Yes</td>
+                            <td class="price-cell price-digicare">No</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Data Ownership</td>
+                            <td>✓ You Own It</td>
+                            <td>✗ Vendor Controlled</td>
+                            <td class="price-cell price-digicare">✓ You Own It</td>
+                        </tr>
+                        <tr style="background: #f0fdf4; font-weight: 700;">
+                            <td class="feature-name">5-Year Total Cost</td>
+                            <td class="price-cell price-traditional">$260,000+</td>
+                            <td class="price-cell price-cloud">$9,000+</td>
+                            <td class="price-cell price-digicare">$899 <span class="savings-badge">SAVE 99%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Everything You Need, Nothing You Don't</h2>
+            <p class="section-subtitle">Purpose-built for solo practitioners. No bloat, no complexity, just what works.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Patient Management</h3>
+                    <p>Unlimited patients, demographics, medical history, emergency contacts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Appointment Scheduling</h3>
+                    <p>Simple calendar, multiple status tracking, no double-booking</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>SOAP Notes</h3>
+                    <p>Professional clinical documentation in industry-standard format</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>Prescriptions</h3>
+                    <p>Generate PDF prescriptions with your logo and signature</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Security & Backup</h3>
+                    <p>Password protection, auto-logout, manual database backups</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Dashboard Analytics</h3>
+                    <p>Today's activity, upcoming appointments, recent patients</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Fast Search</h3>
+                    <p>Find any patient instantly by name or ID</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Local database means instant response, no lag</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">No contracts. No monthly fees. Pay once, own forever.</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Early Bird</h3>
+                    <div class="price"><sup>$</sup>899</div>
+                    <p class="price-note">One-time payment • First 50 customers only</p>
+                    <ul>
+                        <li>Complete DigiCare EMR</li>
+                        <li>Lifetime license</li>
+                        <li>1 year free updates</li>
+                        <li>Priority email support</li>
+                        <li>Early adopter benefits</li>
+                        <li><strong>Save $600 (40% OFF)</strong></li>
+                    </ul>
+                    <a href="#" class="pricing-cta">Get Early Bird Price</a>
+                </div>
+                <div class="pricing-card">
+                <h3>Regular Price</h3>
+                <div class="price"><sup>$</sup>1,499</div>
+                <p class="price-note">One-time payment • After launch period</p>
+                <ul>
+                    <li>Complete DigiCare EMR</li>
+                    <li>Lifetime license</li>
+                    <li>6 months free updates</li>
+                    <li>Email support</li>
+                    <li>Still 97% cheaper than traditional</li>
+                </ul>
+                <a href="#" class="pricing-cta">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Take Control of Your Practice?</h2>
+        <p>Join solo practitioners who've saved $49,000+ switching to DigiCare</p>
+        <a href="#pricing" class="cta-button">Get Started Today →</a>
+        <p class="guarantee">🛡️ 60-Day Money-Back Guarantee • No Questions Asked</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">HIPAA Compliance</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+        </div>
+        <p>&copy; 2024 DigiCare EMR. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 14px;">Professional On-Premise EMR for Solo Practitioners</p>
+    </div>
+</footer>
+</body>
+</html>
