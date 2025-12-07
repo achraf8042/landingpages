@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>DigiSpher Agence Web Tunisie, Création de sites modernes et optimisés</title>
- <meta name="description" content="DigiSpher, agence web en Tunisie, crée des sites modernes et performants avec SEO local et solutions digitales pour booster votre business.">
+  <title>DigiSpher Web Agency - Modern Websites & SEO Services</title>
+ <meta name="description" content="DigiSpher creates modern, high-performance websites with professional SEO services to boost your online presence and drive business results.">
 
-  <meta name="keywords" content="agence web Tunisie, site web Tunisie, création site vitrine, SEO Tunisie, web design Tunisie, référencement local Tunisie, développement web Tunisie, optimisation SEO, sites e-commerce Tunisie">
+  <meta name="keywords" content="web agency, web design, SEO services, website creation, web development, digital solutions, professional websites, SEO optimization, e-commerce">
   <meta name="author" content="DigiSpher">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://digispher.online">
 
   <link rel="icon" href="favicon.png" type="image/png">
   <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="DigiSpher | Agence Web Tunisie – Création de sites modernes et optimisés">
-  <meta property="og:description" content="DigiSpher est une agence web tunisienne spécialisée dans la création de sites modernes, le référencement local (SEO Tunisie) et les solutions digitales pour cliniques, agences immobilières et entreprises.">
+  <meta property="og:title" content="DigiSpher | Web Design & SEO Services">
+  <meta property="og:description" content="DigiSpher is a professional web agency specializing in modern website creation, SEO optimization, and digital solutions for businesses worldwide.">
   <meta property="og:image" content="digispher-logo1.png">
   <meta property="og:url" content="https://digispher.online">
   <meta property="og:type" content="website">
@@ -23,54 +23,172 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DigiSpher | Agence Web Tunisie Création de sites modernes et optimisés">
-  <meta name="twitter:description" content="DigiSpher est une agence web tunisienne spécialisée dans la création de sites modernes, le référencement local (SEO Tunisie) et les solutions digitales pour cliniques, agences immobilières et entreprises.">
+  <meta name="twitter:title" content="DigiSpher | Web Design & SEO Services">
+  <meta name="twitter:description" content="DigiSpher specializes in creating modern websites, SEO optimization, and comprehensive digital solutions for business success.">
   <meta name="twitter:image" content="digispher-logo1.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
-    :root{--primary:#0d6efd;--dark:#0b2a66}
-  *{
-
-  }
-    html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-size:18px;}
-    h1,h2,h3{font-weight:700}
-    h1{font-size:clamp(2.2rem,4vw,4rem)}
-    h2{font-size:clamp(1.6rem,2.5vw,2.4rem)}
-    .lead{font-size:1.15rem}
-    .hero{background:linear-gradient(90deg,rgba(13,110,253,0.08),rgba(13,110,253,0.02));padding:5rem 0}
-    .card-icon{font-size:2rem;color:var(--primary)}
-    .service-card{min-height:220px}
-    .navbar-brand img{height:56px;object-fit:contain}
-    .cta-btn{padding:0.9rem 1.3rem;font-size:1.05rem}
-    .shadow-soft{box-shadow:0 8px 30px rgba(13,110,253,0.06)}
-    footer{background:#0f1724;color:#fff}
-    .big-font{font-size:1.1rem}
-    .whatsapp-btn{position:fixed;right:18px;bottom:18px;z-index:1050}
-    .social-icons a{color:#fff; margin-right:15px; font-size:1.5rem;}
-    .social-icons a:hover{color:var(--primary);}
-        /* Mobile devices (portrait) */
-    @media (max-width:576px){
-
-      html,body{font-size:16px}
-      .hero{padding:3rem 0}
-      h1{font-size:1.8rem}
-      h2{font-size:1.4rem}
-      .lead{font-size:1rem}
-      .cta-btn{padding:0.75rem 1rem;font-size:0.95rem}
-      .navbar-brand img{height:42px}
-      .service-card{min-height:auto}
-      .card-icon{font-size:1.6rem}
-      .big-font{font-size:1rem}
-      .whatsapp-btn{right:12px;bottom:12px}
-      .social-icons a{font-size:1.3rem;margin-right:12px}
+    :root{
+      --primary:#0d6efd;
+      --primary-dark:#0b5ed7;
+      --dark:#0b2a66;
+      --light:#f8f9fa;
+      --success:#198754;
     }
-
+    html,body{
+      font-family:'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size:18px;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-weight:700;
+      color:#0b2a66;
+    }
+    h1{font-size:clamp(2.2rem,4vw,4rem); line-height:1.2;}
+    h2{font-size:clamp(1.8rem,3vw,2.5rem); line-height:1.3; margin-bottom:1.5rem;}
+    h3{font-size:clamp(1.3rem,2vw,1.8rem);}
+    .lead{font-size:1.2rem; font-weight:500;}
+    body{
+      background:#fff;
+    }
+    /* Hero Section */
+    .hero{
+      background:linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+      padding:6rem 0;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero h1{
+      color:#fff;
+      font-weight:800;
+      text-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    .hero .lead{
+      color:rgba(255,255,255,0.95);
+      font-size:1.3rem;
+    }
+    /* Cards */
+    .card{
+      border:none;
+      border-radius:12px;
+      transition:all 0.3s ease;
+      height:100%;
+    }
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 16px 40px rgba(13,110,253,0.15);
+    }
+    .card-icon{
+      font-size:2.5rem;
+      color:var(--primary);
+      margin-bottom:1rem;
+    }
+    /* Sections */
+    section{
+      padding:5rem 0;
+    }
+    .section-header{
+      text-align:center;
+      margin-bottom:4rem;
+    }
+    .section-header h2{
+      margin-bottom:1rem;
+    }
+    .section-header p{
+      font-size:1.1rem;
+      color:#6c757d;
+      max-width:600px;
+      margin:0 auto;
+    }
+    /* Service cards */
+    .service-card{
+      background:#fff;
+      border-radius:12px;
+      padding:1.5rem;
+      min-height:auto;
+      transition:all 0.3s;
+    }
+    .service-card:hover{
+      box-shadow:0 12px 32px rgba(13,110,253,0.12);
+    }
+    /* Navbar */
+    .navbar{
+      background:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+    .navbar-brand img{
+      height:50px;
+      object-fit:contain;
+    }
+    .nav-link{
+      font-weight:500;
+      color:#0b2a66;
+      margin:0 0.5rem;
+      transition:color 0.3s;
+    }
+    .nav-link:hover{
+      color:var(--primary);
+    }
+    /* Buttons */
+    .btn-primary, .btn-outline-light{
+      border-radius:8px;
+      padding:0.65rem 1.5rem;
+      font-weight:600;
+      transition:all 0.3s;
+    }
+    .btn-primary{
+      background:var(--primary);
+      border-color:var(--primary);
+    }
+    .btn-primary:hover{
+      background:var(--primary-dark);
+      box-shadow:0 8px 16px rgba(13,110,253,0.3);
+    }
+    .btn-outline-light:hover{
+      background:#fff;
+      color:var(--primary);
+    }
+    /* Footer */
+    footer{
+      background:linear-gradient(135deg, #0b2a66 0%, #0d6efd 100%);
+      color:#fff;
+      margin-top:5rem;
+    }
+    footer a{
+      color:rgba(255,255,255,0.8);
+      text-decoration:none;
+      transition:color 0.3s;
+    }
+    footer a:hover{
+      color:#fff;
+    }
+    /* WhatsApp Button */
+    .whatsapp-btn{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:1050;
+      animation:float 3s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%, 100%{transform:translateY(0px);}
+      50%{transform:translateY(-10px);}
+    }
+    /* Responsive */
+    @media (max-width:768px){
+      section{padding:3rem 0;}
+      h1{font-size:1.8rem;}
+      h2{font-size:1.4rem;}
+      .lead{font-size:1rem;}
+      .hero{padding:4rem 0;}
+      .section-header{margin-bottom:2.5rem;}
+    }
   </style>
 
-  <!-- Schema.org JSON-LD for LocalBusiness (Tunisie) -->
+  <!-- Schema.org JSON-LD for LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -88,7 +206,7 @@
       "postalCode":"8050",
       "addressCountry":"TN"
     },
-    "description":"Agence web à Tunis spécialisée en création de sites modernes, référencement local et solutions digitales pour entreprises en Tunisie.",
+    "description":"Web agency specializing in modern website creation, SEO optimization, and digital solutions for business success.",
     "areaServed":{"@type":"Country","name":"Tunisia"},
     "sameAs":[
     "https://www.facebook.com/profile.php?id=61579736908309",
@@ -103,7 +221,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="digispher-logo1.png" alt="Logo DigiSpher - Agence Web Tunisie">
+        <img src="digispher-logo1.png" alt="DigiSpher Web Agency Logo">
         <span class="ms-2 fw-bold">DigiSpher</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -112,32 +230,28 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Réalisations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Témoignages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-3"><a class="btn btn-primary cta-btn" href="#contact">Demander un devis</a></li>
+          <li class="nav-item ms-3"><a class="btn btn-primary cta-btn" href="#contact">Get Quote</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero bg-info text-dark">
+  <header class="hero">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7" data-aos="fade-right">
-          <h1 class="mb-3">DigiSpher — Création de sites web modernes et performants en Tunisie</h1>
-          <p class="lead mb-4">Dans un monde numérique en constante évolution, DigiSpher se positionne comme votre partenaire de confiance pour la création de sites web innovants et optimisés. Nous aidons les entreprises tunisiennes, telles que les cliniques médicales, les agences immobilières, les agences de voyages et les PME, à se démarquer en ligne. Nos solutions incluent des designs esthétiques, une vitesse de chargement exceptionnelle et une optimisation SEO locale adaptée au marché tunisien. Que vous soyez à Tunis, Sfax, Sousse ou ailleurs en Tunisie, notre équipe d'experts en web design et SEO vous accompagne pour transformer votre présence digitale en un véritable atout commercial. Avec une approche centrée sur l'utilisateur, nous garantissons des sites responsives qui s'adaptent parfaitement à tous les appareils, améliorant ainsi l'expérience utilisateur et boostant vos conversions.</p>
-          <div class="d-flex gap-2">
-            <a href="#contact" class="btn btn-light btn-lg cta-btn">Demander un devis gratuit</a>
-            <a href="#portfolio" class="btn btn-outline-light btn-lg cta-btn">Voir nos réalisations</a>
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <h1 class="mb-4 display-4 fw-bold">Modern Web Solutions for Your Business</h1>
+          <p class="lead mb-5">Build high-performance websites that drive results. Professional design, expert SEO, and digital excellence combined.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-light btn-lg px-4 fw-bold">Get Free Quote</a>
+            <a href="#portfolio" class="btn btn-outline-light btn-lg px-4 fw-bold">View Our Work</a>
           </div>
-          <p class="mt-4 small text-dark">Service disponible à Tunis, Sfax, Sousse et partout en Tunisie. Contactez-nous pour un audit SEO gratuit et découvrez comment nous pouvons propulser votre business en ligne.</p>
         </div>
-        <div class="col-lg-5" data-aos="fade-left">
-          <div class="card shadow-soft border-0">
-            <img src="digispher-web-solution-tunisie.png" alt="Aperçu des réalisations de sites web par DigiSpher - Agence SEO Tunisie">
-          </div>
+        <div class="col-lg-6">
+          <img src="crm/landingpages/demo_mockup_1765031978916.png" alt="DigiSpher Web Solutions" class="img-fluid rounded-4 shadow-lg">
         </div>
       </div>
     </div>
@@ -145,63 +259,59 @@
 
   <!-- ABOUT / MISSION -->
   <section class="py-5" id="about">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <h2>Notre mission : créer des sites modernes et rentables pour le marché tunisien</h2>
-          <p class="big-font">Chez <strong>DigiSpher</strong>, agence web basée à Tunis, nous croyons fermement qu’un site web n’est pas seulement une vitrine numérique — c’est un outil stratégique essentiel pour la croissance de votre entreprise. Notre mission principale est d’aider les entreprises tunisiennes à augmenter leur visibilité en ligne, à attirer un trafic qualifié et à convertir les visiteurs en clients fidèles. Grâce à des stratégies techniques avancées et des contenus éditoriaux adaptés au contexte local tunisien, nous positionnons vos sites durablement sur les moteurs de recherche comme Google. En tant qu'experts en SEO local, nous intégrons des pratiques optimisées pour les recherches géolocalisées, telles que "agence web Tunisie" ou "création site vitrine Sfax", afin de cibler efficacement votre audience locale.</p>
-          <p class="big-font">Pourquoi choisir DigiSpher ? Notre équipe combine expertise en web design, développement web et optimisation SEO pour offrir des solutions sur-mesure. Nous priorisons la performance, la sécurité et l'expérience utilisateur, en respectant les standards internationaux comme les Core Web Vitals de Google. Que vous soyez une clinique cherchant à faciliter les prises de rendez-vous en ligne, une agence immobilière désirant un catalogue interactif avec intégration Google Maps, ou une PME visant une présence e-commerce robuste, nous adaptons nos services à vos besoins spécifiques. Avec plus de 10 ans d'expérience cumulée dans le secteur digital tunisien, nous avons aidé des dizaines d'entreprises à booster leur chiffre d'affaires grâce à des sites web performants et optimisés pour le mobile.</p>
-          <p class="mb-1">Ce que nous offrons en détail :</p>
-          <ul>
-            <li>Design moderne et responsive, adapté aux mobiles pour une navigation fluide sur smartphones, tablettes et ordinateurs.</li>
-            <li>Optimisation SEO locale (référencement pour recherches en Tunisie), incluant l'audit de mots-clés, la création de contenus optimisés et l'intégration de schema.org pour une meilleure visibilité sur Google.</li>
-            <li>Performance (Core Web Vitals) et sécurité, avec des outils comme HTTPS, compression d'images et minification de code pour des temps de chargement inférieurs à 2 secondes.</li>
-            <li>Support, maintenance et formation pour votre équipe, incluant des sessions personnalisées sur la gestion de contenu via CMS comme WordPress ou des frameworks custom.</li>
-          </ul>
-          <p class="big-font">En choisissant DigiSpher, vous bénéficiez d'une approche holistique qui va au-delà de la simple création de site. Nous analysons votre concurrence locale, identifions les opportunités SEO et implémentons des stratégies digitales durables pour un retour sur investissement maximal. Notre engagement envers l'excellence nous a valu la confiance de clients à travers la Tunisie, et nous sommes fiers de contribuer au développement économique numérique du pays.</p>
+          <h2>Our Mission: Build Websites That Drive Results</h2>
+          <p class="lead mb-4">At <strong>DigiSpher</strong>, we believe a website is more than just a digital storefront—it's a strategic tool for business growth. Our mission is to help businesses increase their online visibility, attract qualified traffic, and convert visitors into loyal customers.</p>
+          <p class="mb-4">We combine cutting-edge design, technical excellence, and strategic SEO to deliver websites that perform. Whether you're launching a new business, redesigning your online presence, or scaling your digital operations, we have the expertise to drive your success.</p>
+          <div class="d-grid gap-2 d-md-block">
+            <a href="#contact" class="btn btn-primary me-2">Get Started Today</a>
+            <a href="#services" class="btn btn-outline-secondary">Learn Our Services</a>
+          </div>
         </div>
         <div class="col-lg-6">
           <div class="row gy-3">
-            <div class="col-md-6" data-aos="zoom-in">
+            <div class="col-md-6">
               <div class="p-4 bg-white rounded shadow-soft service-card">
                 <div class="d-flex align-items-start gap-3">
                   <i class="bi bi-laptop card-icon"></i>
                   <div>
-                    <h5>Design moderne et intuitif</h5>
-                    <p class="mb-0 small">Interfaces claires, expérience utilisateur réfléchie et typographie visible pour capter l'attention dès la première seconde. Nous utilisons des outils comme Figma pour des prototypes interactifs avant développement.</p>
+                    <h5>Modern Design</h5>
+                    <p class="mb-0 small">Clean, intuitive interfaces that engage users and reflect your brand excellence.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-md-6">
               <div class="p-4 bg-white rounded shadow-soft service-card">
                 <div class="d-flex align-items-start gap-3">
                   <i class="bi bi-geo-alt card-icon"></i>
                   <div>
-                    <h5>SEO local Tunisie avancé</h5>
-                    <p class="mb-0 small">Optimisation pour recherches locales, intégration Google Maps, Google Business Profile et contenu ciblé pour la Tunisie, incluant des balises hreflang pour les sites multilingues.</p>
+                    <h5>SEO Optimization</h5>
+                    <p class="mb-0 small">Strategic optimization to improve search rankings and drive organic traffic.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-md-6">
               <div class="p-4 bg-white rounded shadow-soft service-card">
                 <div class="d-flex align-items-start gap-3">
                   <i class="bi bi-speedometer2 card-icon"></i>
                   <div>
-                    <h5>Performance optimisée</h5>
-                    <p class="mb-0 small">Sites rapides avec optimisation d'images, code propre, caching et CDN pour des scores parfaits sur PageSpeed Insights et une meilleure rétention des utilisateurs.</p>
+                    <h5>High Performance</h5>
+                    <p class="mb-0 small">Fast-loading websites with optimal performance across all platforms.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="col-md-6">
               <div class="p-4 bg-white rounded shadow-soft service-card">
                 <div class="d-flex align-items-start gap-3">
                   <i class="bi bi-headset card-icon"></i>
                   <div>
-                    <h5>Support & Maintenance professionnelle</h5>
-                    <p class="mb-0 small">Mises à jour régulières, sauvegardes automatisées, monitoring 24/7 et assistance technique rapide pour assurer la continuité de votre présence en ligne.</p>
+                    <h5>Expert Support</h5>
+                    <p class="mb-0 small">Reliable ongoing maintenance and professional technical assistance.</p>
                   </div>
                 </div>
               </div>
@@ -213,53 +323,53 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="py-5 bg-warning" id="services">
-    <div class="container" data-aos="fade-up">
-      <div class="text-center mb-5">
-        <h2>Nos services complets en web design et SEO</h2>
-        <p class="text-muted">DigiSpher propose des solutions digitales complètes pour lancer, améliorer ou refondre votre présence en ligne. En tant qu'agence web experte en Tunisie, nous combinons créativité et technique pour délivrer des résultats mesurables.</p>
+  <section class="py-5 bg-light" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive digital solutions tailored to your business needs. From design to deployment, we handle everything.</p>
       </div>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 shadow-sm p-4">
             <i class="bi bi-window-stack fs-2 text-primary"></i>
-            <h5 class="mt-3">Création de sites vitrines professionnels</h5>
-            <p class="mb-0">Nos sites vitrines sont conçus sur-mesure pour présenter vos services de manière élégante et convaincante. Nous intégrons des contenus optimisés SEO dès la conception, avec des appels à l'action stratégiques pour maximiser les leads. Idéal pour les cliniques et PME tunisiennes cherchant une visibilité locale accrue. Chaque projet inclut une analyse de mots-clés spécifiques au marché tunisien, une structure sémantique HTML5 et une intégration de outils analytics pour suivre les performances.</p>
+            <h5 class="mt-3">Professional Website Design</h5>
+            <p class="mb-0">Custom-designed websites that showcase your services with elegance and effectiveness. We integrate SEO optimization from the start with strategic calls-to-action to maximize leads. Perfect for businesses seeking increased online visibility with modern, responsive design.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm p-4">
             <i class="bi bi-cart fs-2 text-primary"></i>
-            <h5 class="mt-3">Sites e‑commerce robustes</h5>
-            <p class="mb-0">Développez votre boutique en ligne avec des plateformes performantes comme WooCommerce ou Shopify, adaptées au marché tunisien. Nous assurons un paiement sécurisé via gateways locaux, une UX optimisée pour les mobiles et des fonctionnalités comme les filtres avancés, les wishlists et les intégrations CRM. Nos solutions e-commerce boostent les conversions grâce à une optimisation SEO on-page et des campagnes de remarketing intégrées.</p>
+            <h5 class="mt-3">E-Commerce Solutions</h5>
+            <p class="mb-0">Develop your online store with powerful, performance-optimized platforms. We ensure secure payment processing, mobile-optimized user experience, and advanced features like filters, wishlists, and CRM integration to boost conversions.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm p-4">
             <i class="bi bi-arrow-repeat fs-2 text-primary"></i>
-            <h5 class="mt-3">Refonte & optimisation de sites existants</h5>
-            <p class="mb-0">Si votre site actuel est obsolète, nous le refondons complètement pour améliorer son SEO, sa vitesse et son design. Cela inclut un audit technique approfondi, la migration de contenus sans perte de référencement, et l'implémentation de meilleures pratiques pour les Core Web Vitals. Parfait pour les entreprises tunisiennes voulant moderniser leur présence digitale sans repartir de zéro.</p>
+            <h5 class="mt-3">Website Redesign & Optimization</h5>
+            <p class="mb-0">Modernize your existing website with complete redesign and technical optimization. We perform thorough audits, improve SEO, speed up performance, and implement best practices for better search rankings and user engagement.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm p-4">
             <i class="bi bi-geo-alt fs-2 text-primary"></i>
-            <h5 class="mt-3">Référencement local (SEO Tunisie) expert</h5>
-            <p class="mb-0">Notre service SEO local optimise votre fiche Google Business Profile, crée des contenus géolocalisés et implémente des balises techniques pour dominer les recherches comme "agence immobilière Tunis". Nous utilisons des outils comme SEMrush et Ahrefs pour une stratégie data-driven, incluant backlinks de qualité et optimisation mobile-first pour un ranking supérieur en Tunisie.</p>
+            <h5 class="mt-3">SEO & Local Search Optimization</h5>
+            <p class="mb-0">Dominate local search results with our comprehensive SEO strategy. We optimize your business profile, create geo-targeted content, implement technical SEO best practices, and build quality backlinks for superior rankings.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm p-4">
             <i class="bi bi-cloud-upload fs-2 text-primary"></i>
-            <h5 class="mt-3">Hébergement & maintenance sécurisée</h5>
-            <p class="mb-0">Profitez d'un hébergement fiable avec serveurs locaux en Tunisie, backups quotidiens, protection contre les cybermenaces et surveillance 24/7. Notre maintenance proactive prévient les downtimes et assure des mises à jour régulières pour une performance optimale.</p>
+            <h5 class="mt-3">Hosting & Security Management</h5>
+            <p class="mb-0">Reliable hosting with daily backups, advanced security protection, and 24/7 monitoring. Our proactive maintenance prevents downtime and ensures regular updates for optimal performance and peace of mind.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100 shadow-sm p-4">
             <i class="bi bi-bar-chart-line fs-2 text-primary"></i>
-            <h5 class="mt-3">Stratégie digitale globale</h5>
-            <p class="mb-0">Au-delà du web, nous offrons des conseils en SEO avancé, des campagnes Google Ads ciblées sur la Tunisie et une gestion de réseaux sociaux pour amplifier votre reach. Notre approche intégrée inclut l'analyse de données pour ajuster les stratégies en temps réel et maximiser le ROI.</p>
+            <h5 class="mt-3">Digital Strategy & Analytics</h5>
+            <p class="mb-0">Beyond web design, we provide advanced SEO consulting, targeted advertising campaigns, and social media management. Our integrated approach includes data analysis to adjust strategies in real-time and maximize ROI.</p>
           </div>
         </div>
       </div>
@@ -267,43 +377,43 @@
   </section>
 
   <!-- PORTFOLIO -->
-  <section class="py-5" id="portfolio">
-    <div class="container" data-aos="fade-up">
-      <div class="text-center mb-5">
-        <h2>Nos réalisations professionnelles</h2>
-        <p class="text-muted">Découvrez une sélection de projets réalisés pour des clients tunisiens. Chaque réalisation démontre notre expertise en web design moderne, optimisation SEO et intégration de fonctionnalités avancées. Nous avons collaboré avec divers secteurs pour créer des sites qui non seulement impressionnent visuellement mais génèrent aussi des résultats concrets en termes de trafic et de conversions.</p>
+  <section class="py-5 bg-white" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Recent Projects</h2>
+        <p>Explore our portfolio of successful projects showcasing modern design, SEO optimization, and real results for our clients.</p>
       </div>
       <div class="row g-4">
         <!-- Project 1 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm overflow-hidden">
-            <img src="clinique-image.png" class="card-img-top" alt="Site web pour Clinique Manel - Création par DigiSpher, SEO Tunisie">
+            <img src="clinique-image.png" class="card-img-top" alt="Medical Clinic Website - Professional Healthcare Solution">
             <div class="card-body">
-              <h5 class="card-title">Clinique Manel - Site Vitrine Médical</h5>
-              <p class="card-text small">Pour cette clinique dentaire à Sousse, nous avons développé un site vitrine optimisé pour la prise de rendez-vous en ligne. Intégration de formulaires sécurisés, galerie photos et SEO local pour cibler les recherches comme "dentiste Sousse". Résultat : augmentation de 50% des rendez-vous via le site en 6 mois.</p>
-              <a href="https://moder-clinique-website.netlify.app" class="btn btn-outline-primary btn-sm">Voir le site live</a>
+              <h5 class="card-title">Medical Clinic - Professional Website</h5>
+              <p class="card-text small">A comprehensive website for a dental clinic featuring online appointment booking, secure forms, photo gallery, and local SEO optimization. Result: 50% increase in online appointment requests within 6 months.</p>
+              <a href="https://moder-clinique-website.netlify.app" class="btn btn-outline-primary btn-sm">View Live Site</a>
             </div>
           </div>
         </div>
         <!-- Project 2 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm overflow-hidden">
-            <img src="beauty-website.png" class="card-img-top" alt="Site web pour Active Travel Tunisie - Agence de Voyages par DigiSpher">
+            <img src="beauty-website.png" class="card-img-top" alt="Beauty Center Website with Booking System">
             <div class="card-body">
               <h5 class="card-title">Beauty Center Website</h5>
-              <p class="card-text small">Ce site pour un institut de beauté à Tunis inclut un catalogue interactif des soins avec filtres par type de service, une galerie immersive avant/après, et des pages SEO optimisées pour des termes comme "soins esthétiques Tunisie". Nous avons intégré un système de prise de rendez-vous en ligne et une optimisation mobile complète pour une expérience fluide, entraînant une hausse de 40 % des réservations.</p>
-              <a href="https://emergency-beauty.netlify.app" class="btn btn-outline-primary btn-sm">Voir le site live</a>
+              <p class="card-text small">An interactive beauty services portal with service filters, before/after gallery, online booking system, and complete mobile optimization. Result: 40% increase in online bookings and improved customer engagement.</p>
+              <a href="https://emergency-beauty.netlify.app" class="btn btn-outline-primary btn-sm">View Live Site</a>
             </div>
           </div>
         </div>
         <!-- Project 3 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm overflow-hidden">
-            <img src="agence-immobiliere.jpg" class="card-img-top" alt="Site web pour Agence Immobilière - Catalogue Immobilier par DigiSpher">
+            <img src="agence-immobiliere.jpg" class="card-img-top" alt="Real Estate Agency Catalog with Maps">
             <div class="card-body">
-              <h5 class="card-title">Agence Immobilière - Catalogue avec Maps</h5>
-              <p class="card-text small">Pour cette agence à Tunis, nous avons créé un site catalogue avec recherche avancée, intégration Google Maps pour chaque bien immobilier et optimisation SEO pour "immobilier Tunis". Fonctionnalités incluent des visites virtuelles et un CRM intégré, menant à une multiplication par 2 des leads qualifiés.</p>
-              <a href="#" class="btn btn-outline-primary btn-sm">Voir le site live</a>
+              <h5 class="card-title">Real Estate Agency - Catalog Portal</h5>
+              <p class="card-text small">A professional property listing platform with advanced search, Google Maps integration, virtual tours, and integrated CRM. Features comprehensive SEO optimization for property search. Result: 2x increase in qualified leads.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">View Live Site</a>
             </div>
           </div>
         </div>
@@ -313,42 +423,42 @@
 
   <!-- TESTIMONIALS -->
   <section class="py-5 bg-primary" id="testimonials">
-    <div class="container" data-aos="fade-up">
-      <div class="text-center mb-5">
-        <h2>Témoignages de nos clients satisfaits</h2>
-        <p class="text-muted">Écoutez ce que disent nos clients tunisiens sur nos services en création de sites web et SEO. Leur succès est notre plus grande récompense.</p>
+    <div class="container">
+      <div class="section-header text-white">
+        <h2 class="text-white">What Our Clients Say</h2>
+        <p class="text-white-50">Hear directly from our satisfied clients about the impact we've made on their business.</p>
       </div>
       <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="card border-0 shadow-sm mx-auto" style="max-width:800px;">
               <div class="card-body">
-                <p class="mb-2">« Grâce à DigiSpher, notre site est devenu une vraie vitrine professionnelle. Les patients nous trouvent facilement sur Google, et nos rendez-vous ont augmenté de manière significative ! L'équipe a été à l'écoute et a livré un projet dépassant nos attentes. »</p>
-                <div class="text-end small">— Dr. Manel, Dentiste, Sousse</div>
+                <p class="mb-2">"DigiSpher transformed our online presence. Our website now serves as a true professional showcase. Patients find us easily on Google, and our appointment bookings have increased significantly. The team was responsive and delivered beyond our expectations."</p>
+                <div class="text-end small">— Dr. Manel, Dental Practice</div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="card border-0 shadow-sm mx-auto" style="max-width:800px;">
               <div class="card-body">
-                <p class="mb-2">« La refonte de notre site par DigiSpher a augmenté nos demandes de contact de 70% en seulement 3 mois. Leur expertise en SEO local a été cruciale pour notre visibilité en Tunisie. Très professionnel et réactif. »</p>
-                <div class="text-end small">— Active Travel, Tunis</div>
+                <p class="mb-2">"The website redesign by DigiSpher increased our contact inquiries by 70% in just 3 months. Their SEO expertise was crucial for our visibility. Very professional, responsive, and results-driven."</p>
+                <div class="text-end small">— Active Travel Agency</div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="card border-0 shadow-sm mx-auto" style="max-width:800px;">
               <div class="card-body">
-                <p class="mb-2">« Excellent travail sur notre site e-commerce. DigiSpher a optimisé tout pour le marché tunisien, et nos ventes en ligne ont explosé. Recommandé pour toute entreprise cherchant un partenaire digital fiable. »</p>
-                <div class="text-end small">— Tech Startup, Tunis</div>
+                <p class="mb-2">"Excellent work on our e-commerce platform. DigiSpher optimized everything for performance and conversion, and our online sales have grown substantially. Highly recommended for any business seeking a reliable digital partner."</p>
+                <div class="text-end small">— Tech Startup</div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="card border-0 shadow-sm mx-auto" style="max-width:800px;">
               <div class="card-body">
-                <p class="mb-2">« Grâce à leur stratégie SEO, notre agence immobilière domine les recherches locales. Le site est rapide, beau et fonctionnel. DigiSpher est l'agence web qu'il vous faut en Tunisie ! »</p>
-                <div class="text-end small">— Agence Immobilière, Sfax</div>
+                <p class="mb-2">"Thanks to DigiSpher's SEO strategy, our real estate agency dominates local search results. The website is fast, beautiful, and functional. DigiSpher is the web partner you need for digital success!"</p>
+                <div class="text-end small">— Real Estate Agency</div>
               </div>
             </div>
           </div>
@@ -364,47 +474,133 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="py-5" id="contact">
-    <div class="container" data-aos="fade-up">
+  <section class="py-5 bg-light" id="contact">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h2>Let's Work Together</h2>
+        <p>Ready to transform your online presence? Contact us today for a free consultation and custom proposal.</p>
+      </div>
       <div class="row g-4">
-        <div class="col-lg-6">
-          <h2>Contactez-nous pour votre projet digital</h2>
-          <p class="text-muted">Parlons de votre projet web ou SEO — obtenez un devis gratuit, un diagnostic SEO local et des conseils personnalisés pour booster votre présence en ligne en Tunisie.</p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><i class="bi bi-telephone me-2"></i> +216 23 400 174</li>
-            <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@digispher.online</li>
-            <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Tunis, Tunisie</li>
-          </ul>
+        <!-- Contact Info Column -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm h-100 p-5 bg-white">
+            <h5 class="mb-4 fw-bold text-dark">Get in Touch</h5>
+            
+            <div class="mb-4">
+              <div class="d-flex align-items-start mb-3">
+                <div class="p-3 bg-primary bg-opacity-10 rounded-3 me-3">
+                  <i class="bi bi-telephone text-primary fs-5"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold">Phone</h6>
+                  <p class="mb-0 text-muted small"><a href="tel:+21623400174" class="text-decoration-none text-muted">+216 23 400 174</a></p>
+                </div>
+              </div>
 
-          <!-- Google Map -->
-          <div class="ratio ratio-16x9 mt-3 shadow-sm">
-            <iframe title="Localisation de DigiSpher à Tunis, Tunisie" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.065!2d10.181532!3d36.806496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337c9bb60f4b%3A0x6e04c0d09827b2b0!2sTunis%2C%20Tunisia!5e0!3m2!1sen!2stn!4v1690000000000!5m2!1sen!2stn" allowfullscreen loading="lazy"></iframe>
+              <div class="d-flex align-items-start mb-3">
+                <div class="p-3 bg-primary bg-opacity-10 rounded-3 me-3">
+                  <i class="bi bi-envelope text-primary fs-5"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold">Email</h6>
+                  <p class="mb-0 text-muted small"><a href="mailto:info@digispher.online" class="text-decoration-none text-muted">info@digispher.online</a></p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start mb-4">
+                <div class="p-3 bg-primary bg-opacity-10 rounded-3 me-3">
+                  <i class="bi bi-geo-alt text-primary fs-5"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold">Location</h6>
+                  <p class="mb-0 text-muted small">Tunis, Tunisia</p>
+                </div>
+              </div>
+
+              <hr>
+
+              <h6 class="mb-3 fw-bold">Business Hours</h6>
+              <p class="text-muted small mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+              <p class="text-muted small">Saturday: 10:00 AM - 4:00 PM</p>
+            </div>
+
+            <div class="mt-4">
+              <h6 class="mb-3 fw-bold">Follow Us</h6>
+              <div class="d-flex gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary rounded-circle p-2">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/digispher8" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary rounded-circle p-2">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/digispher" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary rounded-circle p-2">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://wa.me/21623400174" target="_blank" rel="noopener" class="btn btn-sm btn-outline-success rounded-circle p-2">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="card shadow-sm p-4">
+
+        <!-- Contact Form Column -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm p-5 bg-white">
+            <h5 class="mb-4 fw-bold text-dark">Send us a Message</h5>
             <form id="contactForm" onsubmit="handleSubmit(event)">
-              <div class="mb-3">
-                <label class="form-label">Nom complet</label>
-                <input type="text" class="form-control" required>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Full Name *</label>
+                  <input type="text" class="form-control form-control-lg" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Email Address *</label>
+                  <input type="email" class="form-control form-control-lg" placeholder="your@email.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-bold small">Phone Number</label>
+                  <input type="tel" class="form-control form-control-lg" placeholder="+216 XX XXX XXX">
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-bold small">Company/Business</label>
+                  <input type="text" class="form-control form-control-lg" placeholder="Your company name">
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-bold small">Service Interested In *</label>
+                  <select class="form-select form-select-lg" required>
+                    <option value="">Select a service...</option>
+                    <option value="website">Website Design</option>
+                    <option value="ecommerce">E-Commerce Solution</option>
+                    <option value="redesign">Website Redesign</option>
+                    <option value="seo">SEO Services</option>
+                    <option value="hosting">Hosting & Support</option>
+                    <option value="strategy">Digital Strategy</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-bold small">Your Message *</label>
+                  <textarea class="form-control form-control-lg" rows="5" placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">
+                    <i class="bi bi-send me-2"></i>Send Message
+                  </button>
+                </div>
               </div>
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Téléphone</label>
-                <input type="tel" class="form-control">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" rows="5" required></textarea>
-              </div>
-              <div class="d-grid">
-                <button class="btn btn-primary">Envoyer la demande</button>
-              </div>
-              <p class="mt-2 small text-muted">(Formulaire de démonstration — configurez un backend pour recevoir les messages)</p>
             </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Map -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <iframe title="DigiSpher Location in Tunis, Tunisia" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.065!2d10.181532!3d36.806496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337c9bb60f4b%3A0x6e04c0d09827b2b0!2sTunis%2C%20Tunisia!5e0!3m2!1sen!2stn!4v1690000000000!5m2!1sen!2stn" allowfullscreen="" loading="lazy"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -412,51 +608,54 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-5 mt-5">
+  <footer class="py-5 text-white">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h5 class="text-white">DigiSpher</h5>
-          <p class="small text-light">Agence web à Tunis — création de sites modernes et référencement local pour entreprises tunisiennes. Nous transformons vos idées en réalités digitales performantes.</p>
-          <p class="small">© DigiSpher 2025. Tous droits réservés.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3 text-white">DigiSpher</h5>
+          <p class="text-white-50 small">Transforming businesses through modern web design, strategic SEO, and digital excellence. Your partner for online success.</p>
+          <p class="text-white-50 small">&copy; 2025 DigiSpher. All rights reserved.</p>
         </div>
-        <div class="col-md-3">
-          <h6 class="text-white">Liens rapides</h6>
+        <div class="col-md-2">
+          <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
           <ul class="list-unstyled small">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Réalisations</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="mb-2"><a href="#services" class="text-decoration-none">Services</a></li>
+            <li class="mb-2"><a href="#portfolio" class="text-decoration-none">Portfolio</a></li>
+            <li class="mb-2"><a href="#testimonials" class="text-decoration-none">Testimonials</a></li>
+            <li><a href="#contact" class="text-decoration-none">Contact</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h6 class="text-white">Contact & Réseaux Sociaux</h6>
-          <p class="small mb-0">info@digispher.online</p>
-          <p class="small">+216 23 400 174</p>
-          <div class="social-icons mt-3">
-            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" aria-label="Facebook de DigiSpher"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/digispher8" target="_blank" aria-label="Instagram de DigiSpher"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/digispher" target="_blank" aria-label="LinkedIn de DigiSpher"><i class="bi bi-linkedin"></i></a>
-          
+          <h6 class="fw-bold mb-3 text-white">Get in Touch</h6>
+          <ul class="list-unstyled small text-white-50">
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i> +216 23 400 174</li>
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@digispher.online</li>
+            <li><i class="bi bi-geo-alt me-2"></i> Tunis, Tunisia</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3 text-white">Follow Us</h6>
+          <div class="d-flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener" class="text-white-50 text-decoration-none"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="https://www.instagram.com/digispher8" target="_blank" rel="noopener" class="text-white-50 text-decoration-none"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="https://www.linkedin.com/company/digispher" target="_blank" rel="noopener" class="text-white-50 text-decoration-none"><i class="bi bi-linkedin fs-5"></i></a>
           </div>
         </div>
       </div>
-    </div>
   </footer>
 
   <!-- WhatsApp floating button -->
-  <a class="whatsapp-btn" href="https://wa.me/21623400174?text=Bonjour%20DigiSpher,%20je%20souhaite%20un%20devis" target="_blank" aria-label="Contact WhatsApp">
+  <a class="whatsapp-btn" href="https://wa.me/21623400174?text=Hello%20DigiSpher,%20I%20need%20a%20quote" target="_blank" aria-label="Contact via WhatsApp">
     <button class="btn btn-success rounded-circle shadow-sm" style="width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
       <i class="bi bi-whatsapp fs-3" style="color:#fff"></i>
     </button>
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({duration:800,once:true});
     function handleSubmit(e){
       e.preventDefault();
-      alert('Merci — votre message a été enregistré (démonstration). Configurez un backend pour recevoir les messages.');
+      alert('Thank you! Your message has been received. We will contact you soon.');
       e.target.reset();
     }
   </script>
