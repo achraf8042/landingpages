@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Primary Meta Tags -->
+    <title>DigiSpher EMR v1.1 | On-premise EMR Software for Solo Practitioners | $39/month</title>
+    <meta name="title" content="DigiSpher EMR v1.1 | Desktop EMR Software Built for Solo Practitioners">
+    <meta name="description" content="Finally, an EMR that gets it. DigiSpher EMR v1.1 - The simple, powerful desktop EMR designed exclusively for solo practitioners. No complexity. No bloat. Just what you need. $39/month. 14-day free trial.">
+    <meta name="keywords" content="solo practice EMR, simple EMR software, desktop EMR, electronic medical records for solo practitioners, affordable EMR, single provider EMR, therapist EMR, private practice software">
+    <meta name="author" content="DigiSpher Solutions">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digispher-emr.digispher.online/">
+    <meta property="og:title" content="DigiSpher EMR v1.1 | Desktop EMR for Solo Practitioners">
+    <meta property="og:description" content="The EMR solo practitioners actually want. Simple. Powerful. Built just for you. Desktop-based security with all your data under your control.">
+    <meta property="og:image" content="https://digispher-emr.digispher.online/assets/images/digispher-emr-dashboard-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://digispher-emr.digispher.online/">
+    <meta property="twitter:title" content="DigiSpher EMR v1.1 | Desktop EMR for Solo Practitioners">
+    <meta property="twitter:description" content="Desktop EMR software designed for solo practitioners. Simple, secure, and sensibly priced.">
+    <meta property="twitter:image" content="https://digispher-emr.digispher.online/assets/images/digispher-emr-dashboard-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://digispher-emr.digispher.online/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            font-size: 20px; /* Base for desktop */
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --warning-color: #ffc107;
+            --accent-color: #0dcaf0;
+            --dark-blue: #1a3a5f;
+            --light-bg: #f8f9fa;
+        }
+        
+        /* --- Base & Reset --- */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden; /* Critical: Prevent horizontal scroll */
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Layout & Sections --- */
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #0d6efd 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* --- Navigation & Brand --- */
+        .navbar-brand {
+            padding: 0;
+            font-weight: 800;
+            font-size: 1.75rem;
+            letter-spacing: -0.5px;
+            color: var(--dark-blue);
+        }
+        
+        .navbar-brand span {
+            color: var(--primary-color);
+        }
+
+        .nav-link {
+            font-weight: 700; /* Bold */
+            color: var(--dark-blue) !important; /* Clear, dark text */
+            font-size: 1.05rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        /* --- Components --- */
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+        
+        .btn-success {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-preview {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card {
+            border: 2px solid transparent;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .testimonial-card, .comparison-table {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* --- Special "Clean, Simple" Section --- */
+        .rotate-img-container {
+            transform: rotate(2deg); 
+            transition: transform 0.3s ease;
+            margin-bottom: 0;
+        }
+        
+        .feature-floating-card {
+            max-width: 300px; /* Generous width for desktop */
+            z-index: 2;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* --- Animations --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE BREAKPOINTS
+           ========================================= */
+
+        /* Tablet / Laptop Touch (< 992px) */
+        @media (max-width: 991.98px) {
+            /* Reset specific desktop aesthetics for tablet */
+            .rotate-img-container {
+                transform: none !important; /* No rotation to save space */
+                margin-bottom: 2rem;
+            }
+
+            .feature-floating-card {
+                position: relative !important;
+                transform: none !important;
+                bottom: auto !important;
+                left: auto !important;
+                margin: 20px auto 0 auto !important; /* Stack cleanly */
+                display: block;
+                width: 100%;
+                max-width: 100%; /* Use full available width */
+            }
+        }
+
+        /* TABLET specific (< 768px) */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem; /* Slightly smaller on tablet */
+            }
+            
+            .hero-gradient {
+                padding: 60px 0;
+            }
+            
+            .display-4 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* MOBILE "DECREASE EVERYTHING" MODE (< 576px) */
+        @media (max-width: 576px) {
+            :root {
+                font-size: 14px; /* Global scale down */
+            }
+            
+            /* Typography Reductions */
+            h1.display-4 { font-size: 1.8rem !important; }
+            h2.display-4, h2.display-5 { font-size: 1.5rem !important; }
+            .lead { font-size: 1rem; }
+            
+            /* Layout Compaction */
+            .section-padding { padding: 30px 0; }
+            .hero-gradient { padding: 40px 0; }
+            
+            /* Element Scaling */
+            .navbar-brand { font-size: 1.3rem; } /* Compact mobile brand */
+            .feature-icon { width: 48px; height: 48px; font-size: 18px; }
+            .stats-counter { font-size: 2rem; }
+            
+            .btn-lg, .btn-primary, .btn-success {
+                padding: 10px 20px; /* Smaller touch targets */
+                font-size: 1rem;
+            }
+            
+            /* Force cards to behave */
+            .feature-floating-card {
+                margin-top: 1rem !important;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                DigiSpher<span>EMR</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="https://digispher.lemonsqueezy.com/buy/75f99e30-d9ec-4aa9-8ccd-b7045d2c1ab3">Start Free Trial</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in">
+                    <div class="mb-3">
+                        <span class="badge bg-warning text-dark fs-6 px-3 py-2">🎯 Built ONLY for Solo Practitioners</span>
+                    </div>
+                    <h1 class="display-4 fw-bold mb-4">
+                        Finally, An EMR That <span class="text-warning">Actually Gets It</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Tired of bloated EMRs designed for hospitals? DigiSpher EMR is built exclusively for solo practitioners who need simplicity, not complexity. Desktop-based security. Your data stays on YOUR computer. No monthly data hostages.
+                    </p>
+                    
+
+                    
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="https://digispher.lemonsqueezy.com/buy/75f99e30-d9ec-4aa9-8ccd-b7045d2c1ab3" class="btn btn-success btn-lg">
+                            <i class="bi bi-download me-2"></i>Download Free Trial
+                        </a>
+                        <a href="https://youtu.be/jzjOhXOxeQQ?si=MRsxGZ9T9co53_3N" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-eye me-2"></i>View Live Demo
+                        </a>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="bi bi-laptop text-warning me-1"></i>
+                        Desktop-based • Your data, your computer • No internet required • Cancel anytime
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <img src="dashboard-hero.png" 
+                         alt="DigiSpher EMR Dashboard - Clean interface designed for solo practitioners" 
+                         class="img-fluid dashboard-preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why We Build Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center fade-in">
+                    <h2 class="display-4 fw-bold mb-5">Why we build DigiSpherEMR</h2>
+                    <p class="display-6 text-muted mb-4" style="line-height: 1.4;">
+                        We saw brilliant solo practitioners struggling with software designed for massive hospital systems.
+                    </p>
+                    <p class="fs-4 text-secondary mb-4">
+                        You shouldn't have to fight with "enterprise" features you'll never use.
+                        You shouldn't have to pay monthly ransoms to access your own patient data.
+                    </p>
+                    <p class="fs-4 text-secondary">
+                        We built DigiSpher to give you back your time and your control.
+                        Simple. Secure. Yours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-4 bg-light border-bottom">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6">
+                    <div class="stats-counter" data-target="500">0</div>
+                    <p class="mb-0 text-muted">Solo Practitioners</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-counter" data-target="50000">0</div>
+                    <p class="mb-0 text-muted">Patients Managed</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-counter">100</div>
+                    <p class="mb-0 text-muted">% Your Data</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-counter">$39</div>
+                    <p class="mb-0 text-muted">Per Month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Desktop Section -->
+    <section id="why-desktop" class="section-padding bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <h2 class="display-5 fw-bold mb-3">Why Desktop? Why Not Cloud?</h2>
+                    <p class="lead text-muted">Because solo practitioners told us what they REALLY want</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 fade-in">
+                    <div class="comparison-table">
+                        <div class="bg-danger text-white p-3">
+                            <h4 class="mb-0"><i class="bi bi-cloud-slash me-2"></i>Cloud-Based EMRs</h4>
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">❌ Your data held hostage on their servers</li>
+                                <li class="mb-3">❌ Internet goes down = You can't work</li>
+                                <li class="mb-3">❌ Monthly fees forever or lose access</li>
+                                <li class="mb-3">❌ Privacy concerns with third-party servers</li>
+                                <li class="mb-3">❌ Slow performance with spotty internet</li>
+                                <li class="mb-0">❌ Hidden costs for data exports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <div class="comparison-table">
+                        <div class="bg-success text-white p-3">
+                            <h4 class="mb-0"><i class="bi bi-laptop me-2"></i>DigiSpher Desktop</h4>
+                        </div>
+                        <div class="p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">✅ YOUR data on YOUR computer, always</li>
+                                <li class="mb-3">✅ Works offline - no internet needed</li>
+                                <li class="mb-3">✅ Cancel subscription? Keep your data!</li>
+                                <li class="mb-3">✅ Maximum privacy - nothing leaves your PC</li>
+                                <li class="mb-3">✅ Lightning-fast local performance</li>
+                                <li class="mb-0">✅ Export data anytime, for free</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle me-2"></i>
+                        <strong>Peace of Mind:</strong> Your patient data never leaves your computer unless YOU choose to back it up. No corporate servers. No data breaches from some company across the country. Just you, your computer, and complete control.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <h2 class="display-5 fw-bold mb-3">Everything A Solo Practitioner Actually Needs</h2>
+                    <p class="lead text-muted mb-5">No bloat. No unnecessary features. Just the essentials, done exceptionally well.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Patient Management</h4>
+                        <p class="text-muted">Simple patient registration and records. Search instantly. View complete history at a glance. No complexity, no learning curve.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Quick patient registration</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comprehensive profiles</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lightning-fast search</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-calendar-check-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Appointment Scheduling</h4>
+                        <p class="text-muted">Your daily schedule at a glance. Book appointments in seconds. See your week ahead without the chaos of complicated calendar systems.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Today's schedule view</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Weekly overview</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Simple booking process</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-file-medical-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Clinical Notes</h4>
+                        <p class="text-muted">Document visits quickly with templates or free text. Finalize notes with one click. Spend more time with patients, less time clicking.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Customizable templates</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Quick documentation</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>One-click finalization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-prescription"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Prescription Management</h4>
+                        <p class="text-muted">Generate prescriptions digitally. Track medication history. Everything stored locally on your computer for patient safety.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Digital prescriptions</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Medication history tracking</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Quick prescription printing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-exclamation"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Allergy Management</h4>
+                        <p class="text-muted">Maintain detailed allergy records for each patient including allergen, reaction type, severity, and notes. Critical safety feature for prescription management.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Detailed allergen tracking</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Reaction & severity logging</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Safety alerts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-activity"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Vital Signs Monitoring</h4>
+                        <p class="text-muted">Track patient vitals including blood pressure, heart rate, temperature, weight, and oxygen saturation. Complete history for trend analysis.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comprehensive vitals log</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Visual trend analysis</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>History tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Privacy & Security</h4>
+                        <p class="text-muted">On-premise deployment means your data stays on your computer. No cloud storage, no recurring subscriptions. Complete control over patient information.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>100% Local data storage</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>No cloud dependency</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Total data sovereignty</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Analytics Dashboard</h4>
+                        <p class="text-muted">Real-time statistics showing total patients, today's appointments, weekly schedules, and recent activity. Make informed decisions with data insights.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Real-time practice stats</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Patient growth metrics</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Appointment overview</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="feature-icon">
+                            <i class="bi bi-question-circle-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Comprehensive Help</h4>
+                        <p class="text-muted">Built-in help documentation with step-by-step guides for all features. Password recovery with clinic verification for enhanced security.</p>
+                        <ul class="list-unstyled text-muted small">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Step-by-step guides</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Secure password recovery</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Easy troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Showcase -->
+    <section class="section-padding bg-white position-relative overflow-hidden">
+        <!-- Decorative blob effect -->
+        <div class="position-absolute top-50 end-0 translate-middle-y opacity-10 d-none d-lg-block" 
+             style="width: 600px; height: 600px; background: radial-gradient(circle, var(--primary-color) 0%, rgba(255,255,255,0) 70%); z-index: 0; pointer-events: none;">
+        </div>
+
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 fade-in">
+                    <div class="d-inline-flex align-items-center px-3 py-1 mb-4 rounded-pill bg-primary bg-opacity-10 text-primary fw-bold small">
+                        <i class="bi bi-stars me-2"></i> Designed for Focus
+                    </div>
+                    
+                    <h2 class="display-4 fw-bold mb-4">
+                        Clean. Simple. <br>
+                        <span class="text-primary position-relative">
+                            Intuitive.
+                            <svg class="position-absolute start-0 bottom-0 w-100" height="10" viewBox="0 0 100 10" preserveAspectRatio="none" style="opacity: 0.3;">
+                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                            </svg>
+                        </span>
+                    </h2>
+                    
+                    <p class="lead text-muted mb-5">
+                        We stripped away the "enterprise" clutter. What's left is a calm, responsive interface where every button is exactly where your intuition tells you it should be.
+                    </p>
+                    
+                    <div class="vstack gap-4 mb-5">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-success text-white" style="width: 32px; height: 32px;">
+                                <i class="bi bi-check-lg small"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="fw-bold mb-1">Zero Learning Curve</h5>
+                                <p class="text-muted mb-0 small">So simple you can start using it comfortably in 5 minutes.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-success text-white" style="width: 32px; height: 32px;">
+                                <i class="bi bi-lightning-fill small"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="fw-bold mb-1">Blazing Fast Navigation</h5>
+                                <p class="text-muted mb-0 small">Move between patient records and schedules without wait times.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-success text-white" style="width: 32px; height: 32px;">
+                                <i class="bi bi-eye-slash-fill small"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="fw-bold mb-1">No Distractions</h5>
+                                <p class="text-muted mb-0 small">Only the most important clinical information is front and center.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="https://digispher-emr.digispher.online" class="btn btn-primary btn-lg shadow-sm px-4">
+                            <i class="bi bi-play-circle me-2"></i>See It In Action
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 fade-in">
+                    <div class="position-relative">
+                        <!-- Main Image -->
+                        <div class="position-relative rounded-4 shadow-lg overflow-hidden border border-white border-5 rotate-img-container" style="transform: rotate(2deg); transition: transform 0.3s ease;">
+                             <img src="dashboard-hero.png" 
+                             alt="DigiSpher EMR Patient Details Interface" 
+                             class="img-fluid bg-light">
+                        </div>
+                        
+                        <!-- Floating Element -->
+                        <div class="position-absolute bottom-0 start-0 translate-middle-x bg-white p-3 rounded-3 shadow-lg mb-4 ms-5 border border-light feature-floating-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="text-warning small me-1">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="mb-0 small fw-bold text-dark">"The interface is just... beautiful."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding bg-info">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <h2 class="display-5 fw-bold mb-3">Simple Pricing for Solo Practitioners</h2>
+                    <p class="lead text-muted">No hidden fees. No per-patient charges. No surprises.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-8 fade-in">
+                    <div class="card pricing-card h-100 text-center p-4 featured">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-uppercase text-primary">Solo Practitioner</h5>
+                            <div class="my-4">
+                                <span class="display-4 fw-bold">$39</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            <p class="card-text mb-4">One price. One practitioner. Everything you need.</p>
+                            <ul class="list-unstyled text-start my-4">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Single practitioner license</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Unlimited patients</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Desktop application</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>All core features included</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Your data on your computer</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Works offline</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Email support</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Free data export anytime</strong></li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>HIPAA/GDPR compliant</strong></li>
+                            </ul>
+                            <a href="#" class="btn btn-success btn-lg w-100 mb-3">
+                                <i class="bi bi-download me-2"></i>Download 14-Day Trial
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section-padding bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <h2 class="display-5 fw-bold mb-3">What Solo Practitioners Are Saying</h2>
+                    <p class="lead text-muted">Real reviews from practitioners who switched from bloated EMRs</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Sarah&background=0d6efd&color=fff" 
+                                 alt="Dr. Sarah - Solo Therapist" 
+                                 class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Dr. James K.</h6>
+                                <small class="text-muted">Solo GP, Portland</small>
+                            </div>
+                        </div>
+                        <div class="text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted">"I searched Reddit for months looking for 'simple EMR for solo practice.' Everyone complaining about the same thing - too complicated, too expensive. DigiSpher answered those prayers. Desktop-based was the killer feature for me."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://ui-avatars.com/api/?name=Dr+Maria&background=dc3545&color=fff" 
+                                 alt="Dr. Maria - Solo Psychiatrist" 
+                                 class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Dr. Maria L.</h6>
+                                <small class="text-muted">Solo Psychiatrist, Austin</small>
+                            </div>
+                        </div>
+                        <div class="text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted">"My old EMR felt like driving a semi-truck to pick up groceries. Way more than I needed. DigiSpher is like a sports car - fast, efficient, exactly what a solo practitioner needs. And at $39/month? No brainer."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://ui-avatars.com/api/?name=Dr+David&background=198754&color=fff" 
+                                 alt="Dr. David - Solo Chiropractor" 
+                                 class="rounded-circle me-3" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Dr. David C.</h6>
+                                <small class="text-muted">Solo Chiropractor, Denver</small>
+                            </div>
+                        </div>
+                        <div class="text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted">"I was drowning in paperwork. DigiSpher gave me my evenings back. The simple interface means I spend 2 minutes on notes instead of 20. Best investment for my practice."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center fade-in">
+                    <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+                    <p class="lead text-muted">Everything solo practitioners ask us</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Why desktop instead of cloud-based?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Control and security.</strong> Your patient data stays on YOUR computer, not some company's server. You own it. If you cancel your subscription, you keep your data. No internet required to work. Maximum privacy. That's what solo practitioners told us they wanted.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Can I add another provider or staff member?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>No, and that's by design.</strong> DigiSpher EMR is built exclusively for solo practitioners. This keeps the software simple, affordable, and focused on what YOU need. Multi-provider features add complexity and cost that solo practitioners don't want to pay for.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What happens if I cancel my subscription?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>You keep your data!</strong> Since everything is stored on your computer, your patient records remain accessible even if you stop paying. You can export everything at any time. No hostage situations. No ransom demands. Your data is yours, period.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Is there a patient limit?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Unlimited patients.</strong> $39/month covers everything. No per-patient fees. No tiered pricing. Manage 10 patients or 10,000 patients - same price.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Can I access it from multiple computers?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Your license allows installation on one primary computer. You can back up your data and transfer it between computers if needed, but the software is designed for desktop use on your main work machine.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Is it HIPAA compliant?
+                                </button>
+                            </h3>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Yes.</strong> The software includes encryption, access controls, and audit logs. Since data stays on your computer (not third-party servers), you have maximum control over HIPAA compliance. Just maintain proper physical security of your computer.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item fade-in">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                    What if my computer crashes?
+                                </button>
+                            </h3>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We strongly recommend regular backups to external drives or secure cloud storage of YOUR choice. The software includes easy backup/restore features. You control where your backups go - not us.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 fade-in">
+                    <h2 class="fw-bold mb-2">Ready to Get Your Time Back?</h2>
+                    <p class="lead mb-0">Join hundreds of solo practitioners who ditched bloated EMRs for simplicity.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end fade-in">
+                    <a href="https://digispher.lemonsqueezy.com/buy/75f99e30-d9ec-4aa9-8ccd-b7045d2c1ab3" class="btn btn-success btn-lg">
+                        <i class="bi bi-download me-2"></i>Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-heart-pulse-fill text-primary me-2"></i>DigiSpher EMR</h5>
+                    <p class="small">Built exclusively for solo practitioners. Your data, your control.</p>
+                    <p class="small">© 2025 DigiSpher Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-2">
+                        <a href="https://digispher-emr.digispher.online/privacy" class="link-light me-3 text-decoration-none">Privacy Policy</a>
+                        <a href="https://digispher-emr.digispher.online/help-center" class="link-light me-3 text-decoration-none">Help Center</a>
+                        <a href="mailto:info@digispher.online" class="link-light text-decoration-none">Support</a>
+                    </p>
+                    <p class="small mb-0">
+                        <i class="bi bi-laptop me-2"></i>Desktop Application • Windows Compatible
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Counter animation
+        const counters = document.querySelectorAll('.stats-counter');
+        
+        const countUp = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            if (!target) return;
+            
+            const duration = 2000;
+            const step = target / (duration / 16);
+            
+            let current = 0;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    counter.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        };
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    countUp(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        });
+        
+        counters.forEach(counter => counterObserver.observe(counter));
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DigiSpherEMR",
+      "applicationCategory": "MedicalApplication",
+      "operatingSystem": "Windows",
+      "offers": {
+        "@type": "Offer",
+        "price": "39",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "156"
+      }
+    }
+    </script>
+</body>
+</html>
