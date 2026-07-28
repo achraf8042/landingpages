@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — kochky</title>
+<style>
+  :root{
+    --ink:#1b1d2b;
+    --ink-soft:#565a72;
+    --line:#e4e5ee;
+    --paper:#fbfbfd;
+    --accent:#5b5fef;
+    --accent-soft:#eef0ff;
+    --font-display: Georgia, 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:64px 24px 96px;
+  }
+  header.hero{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:48px;
+    padding-bottom:32px;
+    border-bottom:1px solid var(--line);
+  }
+  .mark{
+    width:48px;height:48px;
+    border-radius:12px;
+    background:var(--accent);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .mark svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;}
+  .hero-text h1{
+    font-family:var(--font-display);
+    font-size:1.5rem;
+    margin:0 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .hero-text p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:0.9rem;
+  }
+  .updated{
+    display:inline-block;
+    margin-top:2px;
+    font-size:0.78rem;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:3px 10px;
+    border-radius:20px;
+  }
+  h2{
+    font-family:var(--font-display);
+    font-size:1.15rem;
+    margin:48px 0 14px;
+    letter-spacing:-0.01em;
+  }
+  h2 .num{
+    display:inline-block;
+    width:26px;
+    color:var(--accent);
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:0.85rem;
+  }
+  p{ margin:0 0 14px; color:var(--ink); }
+  ul{ margin:0 0 14px; padding-left:22px; }
+  li{ margin-bottom:8px; }
+  strong{ font-weight:600; }
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px;
+    margin:20px 0;
+  }
+  .card-title{
+    font-weight:600;
+    font-size:0.92rem;
+    margin-bottom:6px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .card-title .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);
+    flex-shrink:0;
+  }
+  .card p{ font-size:0.92rem; color:var(--ink-soft); margin:0; }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0 20px;
+    font-size:0.9rem;
+  }
+  th,td{
+    text-align:left;
+    padding:10px 12px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    color:var(--ink-soft);
+    font-weight:600;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+  .contact{
+    background:var(--accent);
+    color:#fff;
+    border-radius:16px;
+    padding:28px 26px;
+    margin-top:56px;
+  }
+  .contact h2{
+    color:#fff;
+    margin:0 0 8px;
+  }
+  .contact h2 .num{ color:rgba(255,255,255,0.7); }
+  .contact p{ color:rgba(255,255,255,0.9); margin:0 0 4px; }
+  .contact a{ color:#fff; font-weight:600; text-decoration:underline; }
+  footer{
+    margin-top:40px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    font-size:0.8rem;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  @media (max-width:480px){
+    .wrap{padding:40px 18px 64px;}
+    header.hero{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="mark">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5Z"/></svg>
+    </div>
+    <div class="hero-text">
+      <h1>Politique de confidentialité</h1>
+      <p>kochky — Gestion de votre boutique</p>
+      <span class="updated">Dernière mise à jour : 28 juillet 2026</span>
+    </div>
+  </header>
+
+  <p>
+    kochky est une application de gestion de caisse et de stock conçue pour les petits commerces
+    (hanouts) en Tunisie. Cette page explique simplement quelles données l'application utilise,
+    où elles sont stockées, et comment elles sont protégées.
+  </p>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>En résumé</div>
+    <p>
+      kochky fonctionne entièrement hors connexion. Vos données (produits, ventes, crédits clients,
+      factures fournisseurs) restent enregistrées sur votre téléphone. Elles ne sont ni envoyées
+      à un serveur, ni partagées avec un tiers, ni utilisées à des fins publicitaires.
+    </p>
+  </div>
+
+  <h2><span class="num">01</span>Données collectées</h2>
+  <p>L'application enregistre uniquement les informations que vous saisissez vous-même pour faire fonctionner votre boutique :</p>
+  <table>
+    <tr><th>Type de donnée</th><th>Exemple</th></tr>
+    <tr><td>Produits et stock</td><td>Nom, code-barres, prix, quantité</td></tr>
+    <tr><td>Ventes</td><td>Articles vendus, montant, mode de paiement, date</td></tr>
+    <tr><td>Crédits clients</td><td>Nom, téléphone (optionnel), montant dû</td></tr>
+    <tr><td>Factures fournisseurs</td><td>Nom du fournisseur, montant, photo du reçu</td></tr>
+    <tr><td>Paramètres de la boutique</td><td>Devise, taux de taxe, langue</td></tr>
+  </table>
+  <p>kochky ne demande ni votre nom, ni votre e-mail, ni votre localisation, et ne crée aucun compte en ligne.</p>
+
+  <h2><span class="num">02</span>Où sont stockées vos données</h2>
+  <p>
+    Toutes les données sont enregistrées <strong>localement sur votre téléphone</strong>, dans l'espace
+    de stockage de l'application. Aucune donnée n'est envoyée vers un serveur ou un service cloud,
+    car kochky fonctionne sans connexion internet.
+  </p>
+  <p>
+    Si vous utilisez la fonction de sauvegarde, un fichier de sauvegarde est créé sur votre téléphone.
+    Vous seul décidez de le partager (par exemple via WhatsApp ou une carte SD) — kochky ne le transmet
+    jamais automatiquement.
+  </p>
+
+  <h2><span class="num">03</span>Autorisations utilisées</h2>
+  <ul>
+    <li><strong>Caméra</strong> — pour scanner un code-barres ou photographier une facture fournisseur. Les photos restent stockées sur l'appareil.</li>
+    <li><strong>Stockage</strong> — pour enregistrer la base de données locale et les fichiers de sauvegarde.</li>
+  </ul>
+  <p>Aucune autorisation supplémentaire (contacts, localisation, micro) n'est demandée.</p>
+
+  <h2><span class="num">04</span>Partage des données</h2>
+  <p>kochky ne partage aucune donnée avec des tiers, ne contient aucune publicité, et n'effectue aucun suivi analytique. Le partage d'informations (reçu, résumé de vente) via WhatsApp ou un autre service n'a lieu que si vous déclenchez cette action vous-même.</p>
+
+  <h2><span class="num">05</span>Sécurité et suppression des données</h2>
+  <p>
+    Vos données restent sous votre contrôle. Vous pouvez à tout moment supprimer un produit, une vente,
+    un client ou une facture depuis l'application. La désinstallation de l'application supprime
+    définitivement toutes les données stockées localement, sauf si vous avez conservé une sauvegarde séparément.
+  </p>
+
+  <h2><span class="num">06</span>Modifications de cette politique</h2>
+  <p>
+    Cette politique peut être mise à jour si de nouvelles fonctionnalités sont ajoutées à l'application
+    (par exemple une synchronisation en ligne future). La date de mise à jour en haut de page sera
+    actualisée en conséquence.
+  </p>
+
+  <div class="contact">
+    <h2><span class="num">07</span>Nous contacter</h2>
+    <p>Pour toute question concernant cette politique de confidentialité ou vos données :</p>
+    <p><a href="mailto:contact@kochky.tn">contact@kochky.tn</a></p>
+    <p>[Votre numéro de téléphone]</p>
+  </div>
+
+  <footer>
+    kochky — Application de gestion pour petits commerces en Tunisie.
+  </footer>
+
+</div>
+</body>
+</html>
