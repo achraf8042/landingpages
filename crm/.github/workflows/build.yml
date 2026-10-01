@@ -2,6 +2,7 @@ name: Build Executables
 
 on:
   push:
+<<<<<<< ours
     branches: [ "main", "master" ]
     paths-ignore:
       - '**.md'
@@ -9,12 +10,21 @@ on:
       - '.gitignore'
   pull_request:
     branches: [ "main", "master" ]
+=======
+  pull_request:
+>>>>>>> theirs
   workflow_dispatch:
 
 jobs:
   build:
     name: Build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+<<<<<<< ours
+=======
+    defaults:
+      run:
+        working-directory: crm
+>>>>>>> theirs
     strategy:
       fail-fast: false
       matrix:
@@ -29,6 +39,10 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
+<<<<<<< ours
+=======
+        cache-dependency-path: crm/requirements.txt
+>>>>>>> theirs
 
     - name: Install system dependencies (Linux)
       if: runner.os == 'Linux'
@@ -79,7 +93,11 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: DigiSpherEMR-${{ runner.os }}-py${{ matrix.python-version }}
+<<<<<<< ours
         path: dist/
+=======
+        path: crm/dist/
+>>>>>>> theirs
         if-no-files-found: error
         retention-days: 30
 
