@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+Financial_Report_*.csv

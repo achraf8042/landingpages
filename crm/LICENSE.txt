@@ -1,0 +1,36 @@
+END USER LICENSE AGREEMENT (EULA)
+
+IMPORTANT - READ CAREFULLY: This End User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and the software provider for the use of this software application ("Application").
+
+By installing, copying, or otherwise using the Application, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or use the Application.
+
+1. LICENSE GRANT
+Subject to the terms and conditions of this EULA, you are granted a limited, non-exclusive, non-transferable license to use the Application solely for your personal or internal business purposes.
+
+2. RESTRICTIONS
+You may NOT:
+   a) Sell, lease, rent, or otherwise transfer the Application to any third party
+   b) Distribute, transmit, or share the Application in any form or by any means
+   c) Sublicense, redistribute, or make the Application available to others
+   d) Modify, reverse engineer, decompile, or disassemble the Application
+   e) Remove or alter any copyright, trademark, or other proprietary notices
+   f) Use the Application for any commercial redistribution purposes
+
+3. OWNERSHIP
+The Application is licensed, not sold. All rights, title, and interest in and to the Application, including all intellectual property rights, remain with the software provider.
+
+4. TERMINATION
+This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any term of this EULA. Upon termination, you must destroy all copies of the Application in your possession.
+
+5. DISCLAIMER OF WARRANTY
+THE APPLICATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+6. LIMITATION OF LIABILITY
+IN NO EVENT SHALL THE SOFTWARE PROVIDER BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER ARISING OUT OF THE USE OF OR INABILITY TO USE THE APPLICATION.
+
+7. GENERAL
+This EULA shall be governed by and construed in accordance with applicable laws. If any provision of this EULA is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+
+BY USING THIS APPLICATION, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS EULA, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
+
+Copyright © 2025. All Rights Reserved.

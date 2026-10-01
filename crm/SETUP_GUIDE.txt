@@ -1,0 +1,187 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                   DIGISPHER EMR - SETUP GUIDE                            ║
+║                   Electronic Medical Record System                        ║
+║                   Version 2.0                                             ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════
+                          FIRST-TIME SETUP
+═══════════════════════════════════════════════════════════════════════════
+
+Thank you for installing DigiSpher EMR! Follow these steps to get started:
+
+───────────────────────────────────────────────────────────────────────────
+1. DEFAULT LOGIN CREDENTIALS
+───────────────────────────────────────────────────────────────────────────
+
+   Username: doctor
+   Password: doctor123
+
+   ⚠ IMPORTANT: You will be REQUIRED to change this password on first login!
+
+───────────────────────────────────────────────────────────────────────────
+2. INITIAL SETUP PROCESS
+───────────────────────────────────────────────────────────────────────────
+
+   Step 1: Launch DigiSpher EMR
+   ═══════════════════════════════
+   - Double-click the DigiSpherEMR.exe icon
+   - The application will initialize your database automatically
+
+   Step 2: First Login
+   ═══════════════════════════════
+   - Enter the default username: doctor
+   - Enter the default password: doctor123
+   - Click "Login"
+
+   Step 3: Clinic Information Setup
+   ═══════════════════════════════
+   - Choose English or Français in the Language selector.
+   - The language can be changed later in Settings > Language.
+   - You will be prompted to enter your clinic information:
+     • Clinic Name (required)
+     • Clinic Address (required)
+     • License Number (required)
+   - Fill in all fields and click "Save & Continue"
+
+   Step 4: Complete Your Profile
+   ═══════════════════════════════
+   - Update your personal information:
+     • First Name
+     • Last Name
+     • Speciality (e.g., General Practitioner, Cardiologist)
+     • Doctor Title (e.g., MD, DO, MBBS)
+   - Set a new secure password (REQUIRED)
+   - Click "Save & Continue to Dashboard"
+
+   Step 5: Start Using DigiSpher EMR
+   ═══════════════════════════════
+   - You're all set! You can now:
+     • Add patients
+     • Schedule appointments
+     • Create clinical notes
+     • Write prescriptions
+     • Manage your practice
+
+───────────────────────────────────────────────────────────────────────────
+3. QUICK START GUIDE
+───────────────────────────────────────────────────────────────────────────
+
+   Dashboard
+   ═══════════
+   - View today's appointments
+   - See patient statistics
+   - Quick access to common actions
+
+   Patients
+   ═══════════
+   - Click "Add Patient" to register new patients
+   - Search and view patient records
+   - Track allergies and vital signs
+
+   Appointments
+   ═══════════
+   - Click "New Appointment" to schedule
+   - Filter by Day/Week/Month
+   - Update appointment status
+
+   Clinical Notes
+   ═══════════
+   - Document patient visits using SOAP format
+   - Link to appointments
+   - Export to PDF
+
+   Prescriptions
+   ═══════════
+   - Write prescriptions for patients
+   - Track medication history
+   - Generate prescription PDFs
+
+───────────────────────────────────────────────────────────────────────────
+4. IMPORTANT INFORMATION
+───────────────────────────────────────────────────────────────────────────
+
+   ⚠ Data Storage
+   ═══════════════
+   DigiSpher EMR is an ON-PREMISE solution. All your data is stored locally:
+   - Windows: C:\Users\[YourUsername]\AppData\Roaming\DigiSpher EMR\
+   - Database file: data\clinic.db
+   - Log files: logs\clinic_emr.log
+
+   💾 Backup Your Data
+   ═══════════════════
+   CRITICAL: You are responsible for backing up your data regularly!
+   - Go to Settings > Database Management > Backup Database
+   - Store backups in a safe location
+   - Consider daily/weekly backup schedules
+
+   🔒 Security Best Practices
+   ═══════════════════════════
+   - Use a strong password (8+ characters, mix of letters/numbers/symbols)
+   - Change your password regularly
+   - Lock your computer when away
+   - Restrict physical access to the machine
+   - Keep the application updated
+
+   ⏱ Auto-Logout
+   ═══════════════
+   - The system auto-logs out after 15 minutes of inactivity (default)
+   - Adjust this in Settings > Security > Inactivity Timeout
+
+───────────────────────────────────────────────────────────────────────────
+5. PASSWORD RECOVERY
+───────────────────────────────────────────────────────────────────────────
+
+   The clinic name is not a password recovery credential. If you forget your
+   password, contact your clinic administrator. There is no built-in
+   self-service reset; keep a protected copy of your credentials and backups.
+
+───────────────────────────────────────────────────────────────────────────
+6. SYSTEM REQUIREMENTS
+───────────────────────────────────────────────────────────────────────────
+
+   Minimum Requirements:
+   - Operating System: Windows 10 or later
+   - RAM: 4 GB
+   - Disk Space: 500 MB free space
+   - Display: 1280 x 720 minimum resolution
+
+   Recommended:
+   - RAM: 8 GB or more
+   - SSD for better performance
+   - Display: 1920 x 1080 or higher
+
+───────────────────────────────────────────────────────────────────────────
+7. NEED HELP?
+───────────────────────────────────────────────────────────────────────────
+
+   Access the built-in Help Guide:
+   - Click "Help" in the sidebar
+   - Comprehensive documentation available
+   - Step-by-step instructions for all features
+
+   For technical support:
+   - Contact your IT administrator
+   - Email: support@digispher.com (if applicable)
+
+═══════════════════════════════════════════════════════════════════════════
+                            LICENSE INFORMATION
+═══════════════════════════════════════════════════════════════════════════
+
+This software is licensed for SOLO PRACTICE use only.
+- For single practitioner/provider
+- NOT for sharing, resale, or multi-user deployment
+- See Settings > License & Terms for full EULA
+
+© 2024 DigiSpher EMR Systems. All rights reserved.
+
+═══════════════════════════════════════════════════════════════════════════
+
+                        THANK YOU FOR CHOOSING DIGISPHER EMR!
+
+        For the latest updates and documentation, visit www.digispher.com
+                    (Replace with your actual website)
+
+═══════════════════════════════════════════════════════════════════════════
